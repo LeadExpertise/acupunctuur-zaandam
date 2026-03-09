@@ -18,8 +18,8 @@ export default function Header() {
       <div className="bg-[#FAF8F3]/95 backdrop-blur-md border-b border-[#1F3A36]/5 relative z-20">
         <div className="flex h-20 max-w-6xl mr-auto ml-auto pr-4 sm:pr-6 pl-4 sm:pl-6 items-center justify-between">
 
-          <a
-            href="#"
+          <Link
+            href="/"
             aria-label="Home Acupunctuur Zaandam"
             className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 focus-visible:ring-offset-[#FAF8F3] rounded-sm inline-flex items-center"
           >
@@ -29,7 +29,7 @@ export default function Header() {
               alt="Acupunctuur Zaandam Logo"
               className="w-auto h-6 sm:h-8 object-cover bg-center"
             />
-          </a>
+          </Link>
 
           {/* Desktop menu */}
           <ul
@@ -37,7 +37,7 @@ export default function Header() {
             role="list"
           >
             <li>
-              <Link href="/#klachten" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+              <Link href="/welke-klachten" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
                 Welke klachten
               </Link>
             </li>
@@ -111,18 +111,13 @@ export default function Header() {
       <div className="hidden peer-checked:flex absolute top-[100%] left-0 w-full bg-[#FAF8F3] flex-col border-b border-[#1F3A36]/10 shadow-2xl p-6 gap-6 lg:hidden z-0">
         <ul className="flex flex-col gap-4 list-none p-0 m-0">
           <li>
-            <a href="#klachten" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
-              Klachten
-            </a>
+            <Link href="/welke-klachten" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+              Welke klachten
+            </Link>
           </li>
           <li>
-            <a href="#behandeling" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
-              Behandeling
-            </a>
-          </li>
-          <li>
-            <a href="#werkwijze" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
-              Werkwijze
+            <a href="#behandeling-werkwijze" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+              Behandeling &amp; werkwijze
             </a>
           </li>
           <li>
@@ -135,7 +130,18 @@ export default function Header() {
               Over ons
             </a>
           </li>
+          <li>
+            <a href="#contact" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+              Veelgestelde vragen
+            </a>
+          </li>
         </ul>
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center px-6 py-3.5 rounded-sm bg-[#1F3A36] text-[#FAF8F3] text-sm font-normal hover:bg-[#4A6559] transition-colors duration-300"
+        >
+          Plan een afspraak
+        </a>
       </div>
 
     </nav>
