@@ -42,24 +42,24 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="#behandeling-werkwijze" className="text-sm font-normal text-[#1F3A36]/80 hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 rounded-sm px-1 py-0.5">
+              <Link href="/behandeling-werkwijze" className="text-sm font-normal text-[#1F3A36]/80 hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 rounded-sm px-1 py-0.5">
                 Behandeling &amp; werkwijze
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#tarieven" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+              <Link href="/tarieven-vergoeding" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
                 Tarieven &amp; vergoeding
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#over-ons" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+              <Link href="/over-de-praktijk" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
                 Over ons
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+              <Link href="/veelgestelde-vragen" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
                 Veelgestelde vragen
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -116,24 +116,24 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a href="#behandeling-werkwijze" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+            <Link href="/behandeling-werkwijze" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
               Behandeling &amp; werkwijze
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#tarieven" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+            <Link href="/tarieven-vergoeding" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
               Tarieven &amp; vergoeding
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#over-ons" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+            <Link href="/over-de-praktijk" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
               Over ons
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+            <Link href="/veelgestelde-vragen" className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
               Veelgestelde vragen
-            </a>
+            </Link>
           </li>
         </ul>
         <a

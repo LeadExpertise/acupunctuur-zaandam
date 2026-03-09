@@ -76,29 +76,29 @@ export default function Footer() {
             <nav aria-label="Footer Navigatie">
               <ul className="space-y-3 text-sm text-[#1F3A36]/80 font-light list-none p-0 m-0">
                 <li>
-                  <a href="/klachten" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
-                    Klachten &amp; Behandelingen
-                  </a>
+                  <Link href="/welke-klachten" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Welke klachten
+                  </Link>
                 </li>
                 <li>
-                  <a href="/werkwijze" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
-                    Werkwijze &amp; Tarieven
-                  </a>
+                  <Link href="/behandeling-werkwijze" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Behandeling &amp; werkwijze
+                  </Link>
                 </li>
                 <li>
-                  <a href="/vergoedingen" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
-                    Vergoedingen Zorgverzekeraar
-                  </a>
+                  <Link href="/tarieven-vergoeding" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Tarieven &amp; vergoeding
+                  </Link>
                 </li>
                 <li>
-                  <a href="/over-ons" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
-                    Over Sam de Vries
-                  </a>
+                  <Link href="/over-de-praktijk" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Over de praktijk
+                  </Link>
                 </li>
                 <li>
-                  <a href="/veelgestelde-vragen" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
-                    Veelgestelde Vragen (FAQ)
-                  </a>
+                  <Link href="/veelgestelde-vragen" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Veelgestelde vragen
+                  </Link>
                 </li>
               </ul>
             </nav>
