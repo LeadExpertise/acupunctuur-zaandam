@@ -36,6 +36,17 @@ body {
   transform: translateX(4px);
 }
 
+/* Prose custom: article text spacing */
+.prose-custom p {
+  margin-bottom: 1.5rem;
+}
+.prose-custom ul {
+  margin-bottom: 1.5rem;
+}
+.prose-custom li {
+  margin-bottom: 0.5rem;
+}
+
 /* Hide AI page-builder injected content (no-op in production) */
 [data-element-id="aura-emmgkucac3ghb8gsl"] + div { display: none !important; }
 [data-element-id="aura-emmgkucac3ghb8gsl"] ~ div { display: none !important; }

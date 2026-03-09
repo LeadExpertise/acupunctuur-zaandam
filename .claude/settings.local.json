@@ -26,7 +26,8 @@
       "Bash(for f in a2eff7f9c5503d180 ac534a8ba0e751bfc)",
       "Bash(do echo -n \"$f: \" wc -l /private/tmp/claude-502/-Users-Sam-Desktop-acupunctuur-zaandam/tasks/$f.output)",
       "Bash(for f in accf1552af53b5e50 a02555ad35316d709 a05f2532e19f05f6b a2eff7f9c5503d180 ac534a8ba0e751bfc)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(python3:*)"
     ]
   }
 }
