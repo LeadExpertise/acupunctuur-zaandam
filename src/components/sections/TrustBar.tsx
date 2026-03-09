@@ -20,6 +20,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e20f36d5-fa43-45b0-80bb-6be75fbddc32_800w.webp"
             alt="NVA - Nederlandse Vereniging voor Acupunctuur"
+            loading="lazy"
             className="md:h-12 w-auto h-10 object-cover bg-center"
           />
 
@@ -28,6 +29,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/31e0e290-0757-46ba-a865-f2b818683b9d_320w.png"
             alt="VGZ"
+            loading="lazy"
             className="md:h-10 bg-center w-auto h-8 object-cover"
           />
 
@@ -36,6 +38,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a2e5dfdb-34c2-4807-8f43-9cce38479a8d_800w.jpg"
             alt="TCMA - Traditional Chinese Medicine Academy"
+            loading="lazy"
             className="md:h-12 w-auto h-10 object-contain"
           />
 
@@ -44,6 +47,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png"
             alt="Zilveren Kruis"
+            loading="lazy"
             className="md:h-12 w-auto h-10 object-cover bg-center"
           />
 
@@ -52,6 +56,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png"
             alt="CZ"
+            loading="lazy"
             className="md:h-10 bg-center w-auto h-8 object-cover"
           />
 
@@ -60,6 +65,7 @@ export default function TrustBar() {
           <img
             src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d9d7f8ec-453f-43d5-b95b-c8e49400962d_original.gif"
             alt="Menzis"
+            loading="lazy"
             className="md:h-10 w-auto h-8 object-cover bg-center"
           />
 

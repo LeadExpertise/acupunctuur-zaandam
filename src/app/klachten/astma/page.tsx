@@ -425,6 +425,7 @@ export default function AstmaPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_astma"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
                   </div>

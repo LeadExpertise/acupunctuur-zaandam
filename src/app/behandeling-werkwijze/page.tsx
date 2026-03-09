@@ -1012,6 +1012,7 @@ export default function BehandelingWerkwijzePage() {
                         zIndex: 10,
                       }}
                       scrolling="yes"
+                      loading="lazy"
                       id="D8uouGkFZH4Alr37y5z4_1772903081790"
                     />
                   </div>

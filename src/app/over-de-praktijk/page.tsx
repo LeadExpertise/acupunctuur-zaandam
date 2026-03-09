@@ -639,6 +639,7 @@ export default function OverDePraktijkPage() {
                         zIndex: 10,
                       }}
                       scrolling="yes"
+                      loading="lazy"
                       id="D8uouGkFZH4Alr37y5z4_over_de_praktijk"
                     />
                   </div>

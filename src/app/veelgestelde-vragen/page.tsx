@@ -804,6 +804,7 @@ export default function VeelgesteldeVragenPage() {
                         zIndex: 10,
                       }}
                       scrolling="yes"
+                      loading="lazy"
                       id="D8uouGkFZH4Alr37y5z4_veelgestelde_vragen"
                     />
                   </div>

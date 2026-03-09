@@ -674,6 +674,7 @@ export default function FrozenShoulderPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_frozen_shoulder"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script
                       src="https://link.msgsndr.com/js/form_embed.js"

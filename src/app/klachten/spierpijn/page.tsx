@@ -667,6 +667,7 @@ export default function SpierpijnPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_spierpijn"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
                   </div>

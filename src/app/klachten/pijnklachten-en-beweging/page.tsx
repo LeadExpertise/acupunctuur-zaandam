@@ -520,6 +520,7 @@ export default function PijnklachtenPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_pijnklachten"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script
                       src="https://link.msgsndr.com/js/form_embed.js"

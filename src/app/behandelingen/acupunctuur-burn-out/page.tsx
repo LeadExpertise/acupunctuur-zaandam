@@ -395,6 +395,7 @@ export default function BurnOutPage() {
                   id="D8uouGkFZH4Alr37y5z4_behandeling_burn_out"
                   src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
                   style={{ width: "100%", height: "490px", border: "none" }}
+                  loading="lazy"
                   title="Afspraak maken voor burn-out behandeling"
                 />
               </div>

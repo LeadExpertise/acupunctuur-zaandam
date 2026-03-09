@@ -530,6 +530,7 @@ export default function WelkeKlachtenPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_welke_klachten"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script
                       src="https://link.msgsndr.com/js/form_embed.js"

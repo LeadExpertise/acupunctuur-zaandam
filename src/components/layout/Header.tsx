@@ -1,5 +1,6 @@
 // CSS-only mobile menu via checkbox peer trick – no "use client" needed
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -23,11 +24,14 @@ export default function Header() {
             aria-label="Home Acupunctuur Zaandam"
             className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 focus-visible:ring-offset-[#FAF8F3] rounded-sm inline-flex items-center"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png"
               alt="Acupunctuur Zaandam Logo"
-              className="w-auto h-6 sm:h-8 object-cover bg-center"
+              width={160}
+              height={32}
+              priority
+              className="w-auto h-6 sm:h-8 object-contain"
+              style={{ height: "auto" }}
             />
           </Link>
 

@@ -417,6 +417,7 @@ export default function StoppenMetRokenPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_behandeling_roken"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
                   </div>

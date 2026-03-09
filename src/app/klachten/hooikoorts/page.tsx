@@ -522,7 +522,8 @@ export default function HooikoortsPage() {
                 src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
                 style={{ width: "100%", border: "none", overflow: "hidden" }}
                 scrolling="no"
-                title="Afspraak maken – hooikoorts behandeling Zaandam"
+                loading="lazy"
+                  title="Afspraak maken – hooikoorts behandeling Zaandam"
                 height="700"
               />
             </div>

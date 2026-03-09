@@ -483,6 +483,7 @@ export default function VruchtbaarheidsproblemenBehandelingPage() {
                   src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
                   style={{ width: "100%", border: "none", minHeight: "500px" }}
                   id="D8uouGkFZH4Alr37y5z4_behandeling_vrucht"
+                  loading="lazy"
                   title="Afspraak maken voor vruchtbaarheidsproblemen"
                 />
               </div>

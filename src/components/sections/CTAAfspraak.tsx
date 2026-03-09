@@ -107,6 +107,8 @@ export default function CTAAfspraak() {
                     zIndex: 10,
                   }}
                   id="D8uouGkFZH4Alr37y5z4_1772903081790"
+                  title="Maak een afspraak"
+                  loading="lazy"
                   data-initial-iframe-hidden="true"
                   data-unique-id-mapped="true"
                   data-iframe-resizer-initialized="true"

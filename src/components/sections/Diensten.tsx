@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Diensten() {
   return (
     <section aria-labelledby="diensten-titel" className="bg-[#1F3A36] pt-32 pb-32 relative">
@@ -32,11 +34,13 @@ export default function Diensten() {
           {/* Kaart 1 */}
           <div className="rounded-2xl overflow-hidden shadow-xl border border-[#FAF8F3]/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-500 motion-reduce:transition-none motion-reduce:transform-none flex flex-col h-full group focus-within:ring-2 focus-within:ring-[#FAF8F3] focus-within:ring-offset-4 focus-within:ring-offset-[#1F3A36] bg-[#FAF8F3]/5">
             <div className="relative h-60 w-full overflow-hidden shrink-0 border-b border-[#FAF8F3]/10">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1624716346720-6c96dfd07807?w=800&q=80"
                 alt="Weergave van acupunctuurnaalden voor pijnbestrijding"
-                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
+                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 object-cover"
               />
             </div>
             <div className="p-8 flex flex-col flex-grow relative z-10">
@@ -64,11 +68,13 @@ export default function Diensten() {
           {/* Kaart 2 */}
           <div className="rounded-2xl overflow-hidden shadow-xl border border-[#FAF8F3]/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-500 motion-reduce:transition-none motion-reduce:transform-none flex flex-col h-full group focus-within:ring-2 focus-within:ring-[#FAF8F3] focus-within:ring-offset-4 focus-within:ring-offset-[#1F3A36] bg-[#FAF8F3]/5">
             <div className="relative h-60 w-full overflow-hidden shrink-0 border-b border-[#FAF8F3]/10">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1e7cbcd5-0deb-405a-aebf-1ac47d0b5e49_800w.webp"
                 alt="Behandelaar die de werkwijze van acupunctuur toepast"
-                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 bg-center w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
+                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 object-cover"
               />
             </div>
             <div className="p-8 flex flex-col flex-grow relative z-10">
@@ -96,11 +102,13 @@ export default function Diensten() {
           {/* Kaart 3 */}
           <div className="rounded-2xl overflow-hidden shadow-xl border border-[#FAF8F3]/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-500 motion-reduce:transition-none motion-reduce:transform-none flex flex-col h-full group focus-within:ring-2 focus-within:ring-[#FAF8F3] focus-within:ring-offset-4 focus-within:ring-offset-[#1F3A36] bg-[#FAF8F3]/5">
             <div className="relative h-60 w-full overflow-hidden shrink-0 border-b border-[#FAF8F3]/10">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0acdfc0b-7c17-44c6-9162-cb7b3309a4f2_800w.png"
                 alt="Portret van acupuncturist Sam de Vries in de praktijk"
-                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 w-full h-full object-cover bg-center"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
+                className="transition-transform duration-1000 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 object-cover"
               />
             </div>
             <div className="p-8 flex flex-col flex-grow relative z-10">

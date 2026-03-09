@@ -514,6 +514,7 @@ export default function OveractieveBlaasBehandelingPage() {
                   src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
                   style={{ width: "100%", border: "none", minHeight: "500px" }}
                   id="D8uouGkFZH4Alr37y5z4_behandeling_overactief_blaas"
+                  loading="lazy"
                   title="Afspraak maken voor overactieve blaas"
                 />
               </div>

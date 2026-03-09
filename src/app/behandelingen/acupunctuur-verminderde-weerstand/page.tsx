@@ -594,6 +594,7 @@ export default function VerminderdWeerstandPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_behandeling_weerstand"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script
                       src="https://link.msgsndr.com/js/form_embed.js"

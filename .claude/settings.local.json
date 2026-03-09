@@ -28,7 +28,8 @@
       "Bash(for f in accf1552af53b5e50 a02555ad35316d709 a05f2532e19f05f6b a2eff7f9c5503d180 ac534a8ba0e751bfc)",
       "Bash(rm:*)",
       "Bash(python3:*)",
-      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" node:*)"
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" node:*)",
+      "Bash(grep:*)"
     ]
   }
 }

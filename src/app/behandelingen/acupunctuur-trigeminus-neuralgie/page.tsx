@@ -530,6 +530,7 @@ export default function TrigerminusNeuragiePage() {
                   id="D8uouGkFZH4Alr37y5z4_behandeling_trigeminus_neuralgie"
                   src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
                   style={{ width: "100%", height: "490px", border: "none" }}
+                  loading="lazy"
                   title="Afspraak maken voor trigeminusneuralgie behandeling"
                 />
               </div>

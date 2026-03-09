@@ -686,6 +686,7 @@ export default function TarievenVergoedingPage() {
                         zIndex: 10,
                       }}
                       scrolling="yes"
+                      loading="lazy"
                       id="D8uouGkFZH4Alr37y5z4_tarieven_vergoeding"
                     />
                   </div>

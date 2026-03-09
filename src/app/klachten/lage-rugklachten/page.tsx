@@ -779,6 +779,7 @@ export default function LageRugklachtenPage() {
                       scrolling="yes"
                       id="D8uouGkFZH4Alr37y5z4_lage_rugklachten"
                       title="Maak een afspraak"
+                      loading="lazy"
                     />
                     <Script
                       src="https://link.msgsndr.com/js/form_embed.js"
