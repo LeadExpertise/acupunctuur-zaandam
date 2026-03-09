@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/local/lib/node_modules/**)",
+      "Read(//Users/Sam/.volta/**)",
+      "Read(//Users/Sam/.nodenv/**)",
+      "Bash(sudo npm:*)",
+      "Bash(npm install:*)",
+      "Bash(ls /usr/local/opt/node*/bin/node)",
+      "Read(//usr/local/Cellar/**)",
+      "Bash(/usr/local/opt/heroku-node/bin/node --version)",
+      "Bash(curl:*)",
+      "Bash(tar:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm install:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm audit:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm run:*)",
+      "Bash(git:*)"
+    ]
+  }
+}
