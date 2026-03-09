@@ -14,7 +14,8 @@
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm install:*)",
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm audit:*)",
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm run:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(gh:*)"
     ]
   }
 }
