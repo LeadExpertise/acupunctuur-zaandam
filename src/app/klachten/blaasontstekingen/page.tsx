@@ -86,6 +86,15 @@ export default function BlaasontstekingenPage() {
 
         <article className="py-20 relative z-10 bg-white">
           <div className="max-w-3xl mx-auto px-6 space-y-16">
+
+            {/* Featured Snippet — targets "Helpt acupunctuur bij blaasontstekingen?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur ondersteunt bij blaasontstekingen door het lokale immuunsysteem van de blaas te versterken, bacteriële adhesie te verminderen en de blaasslijmvliezen te beschermen. Effectief bij terugkerende blaasontstekingen (recidiverende UWI) als preventieve behandeling — en vermindert de noodzaak van herhaald antibioticagebruik.
+              </p>
+            </div>
+
             <section>
               <h2 className="text-3xl font-normal text-[#1F3A36] tracking-tight mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Wat zijn terugkerende blaasontstekingen?</h2>
               <p className="text-base text-[#1F3A36]/80 font-light leading-relaxed mb-4">Een blaasontsteking (cystitis) ontstaat wanneer bacteriën — meestal Escherichia coli uit de darmflora — de blaas bereiken via de urethra en zich daar vermenigvuldigen. De klassieke symptomen zijn een brandend gevoel bij het plassen, frequente aandrang, troebele of stinkende urine en soms bloed in de urine. Bij vrouwen komt een blaasontsteking veel vaker voor dan bij mannen vanwege de kortere urethra.</p>
@@ -242,6 +251,38 @@ export default function BlaasontstekingenPage() {
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-cover bg-center" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-white border-b border-[#1F3A36]/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-2 text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <p className="text-sm text-[#1F3A36]/60 font-light text-center mb-8">
+              Acupunctuur helpt ook bij deze verwante klachten
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { href: "/klachten/blaasklachten", label: "Blaasklachten" },
+                { href: "/klachten/blaas-urogenitaal", label: "Blaas & Urogenitaal" },
+                { href: "/klachten/overactieve-blaas", label: "Overactieve Blaas" },
+                { href: "/klachten/hormonen-vrouwenklachten", label: "Hormonen & Vrouwenklachten" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="klacht-card-link flex items-center justify-between gap-2 bg-[#FAF8F3] hover:bg-[#F2EDE3] border border-[#1F3A36]/10 rounded-xl px-5 py-4 transition-colors duration-200 group"
+                >
+                  <span className="text-sm font-medium text-[#1F3A36]">{item.label}</span>
+                  <iconify-icon icon="solar:alt-arrow-right-linear" className="arrow-icon text-[#4A6559] text-base shrink-0 transition-transform duration-200" />
+                </Link>
+              ))}
             </div>
           </div>
         </section>

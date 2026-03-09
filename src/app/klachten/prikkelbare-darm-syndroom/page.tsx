@@ -91,6 +91,13 @@ export default function PrikkelbaareDarmSyndoomPage() {
 
         <article className="py-16 bg-white border-y border-[#1F3A36]/5">
           <div className="max-w-4xl mx-auto px-6 space-y-16">
+            {/* Featured Snippet — targets "Helpt acupunctuur bij prikkelbare darm syndroom?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur is bewezen effectief bij het prikkelbare darm syndroom (PDS/IBS). Het reguleert de darm-hersenas, vermindert viscerale hypersensitiviteit en verlicht buikpijn, krampen en wisselende ontlasting. Meerdere gerandomiseerde studies tonen significante klachtenvermindering aan bij PDS-patiënten na een behandeltraject van 8–10 sessies.
+              </p>
+            </div>
 
             <section>
               <h2 className="text-2xl md:text-3xl font-normal text-[#1F3A36] tracking-tight mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Wat is het prikkelbare darm syndroom?</h2>
@@ -204,6 +211,38 @@ export default function PrikkelbaareDarmSyndoomPage() {
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-cover bg-center" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-white border-b border-[#1F3A36]/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-2 text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <p className="text-sm text-[#1F3A36]/60 font-light text-center mb-8">
+              Acupunctuur helpt ook bij deze verwante klachten
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { href: "/klachten/darmklachten", label: "Darmklachten" },
+                { href: "/klachten/obstipatie", label: "Obstipatie" },
+                { href: "/klachten/buikpijn", label: "Buikpijn" },
+                { href: "/klachten/stressklachten", label: "Stressklachten" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="klacht-card-link flex items-center justify-between gap-2 bg-[#FAF8F3] hover:bg-[#F2EDE3] border border-[#1F3A36]/10 rounded-xl px-5 py-4 transition-colors duration-200 group"
+                >
+                  <span className="text-sm font-medium text-[#1F3A36]">{item.label}</span>
+                  <iconify-icon icon="solar:alt-arrow-right-linear" className="arrow-icon text-[#4A6559] text-base shrink-0 transition-transform duration-200" />
+                </Link>
+              ))}
             </div>
           </div>
         </section>

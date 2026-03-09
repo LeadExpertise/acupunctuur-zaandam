@@ -136,6 +136,14 @@ export default function PijnklachtenPage() {
           </div>
         </header>
 
+        {/* Featured Snippet — targets "Helpt acupunctuur bij pijnklachten en beweging?" */}
+        <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 max-w-3xl mx-auto px-6 my-10 relative z-10">
+          <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+          <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+            Ja. Acupunctuur verlicht pijn en verbetert bewegelijkheid door endorfines vrij te maken, ontstekingen te remmen en spierspanning te verminderen. Onderzoek toont aan dat acupunctuur effectief is bij gewrichtspijn, spierpijn en bewegingsbeperkingen — en een veilig alternatief biedt voor langdurig medicijngebruik.
+          </p>
+        </div>
+
         {/* Waarom werkt acupunctuur bij pijn? */}
         <section className="py-16 bg-white relative z-10 border-y border-[#1F3A36]/5">
           <div className="max-w-4xl mx-auto px-6">
@@ -390,6 +398,39 @@ export default function PijnklachtenPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
             </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-[#FAF8F3] border-t border-[#1F3A36]/10">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-8"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { href: "/klachten/lage-rugklachten", label: "Lage rugklachten" },
+                { href: "/klachten/kniepijn", label: "Kniepijn" },
+                { href: "/klachten/spierpijn", label: "Spierpijn" },
+                { href: "/klachten/artrose", label: "Artrose" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-[#1F3A36]/10 hover:border-[#4A6559]/40 hover:bg-[#F2EDE3] transition-colors group"
+                  >
+                    <iconify-icon
+                      icon="solar:alt-arrow-right-linear"
+                      className="text-[#4A6559] group-hover:translate-x-0.5 transition-transform"
+                    />
+                    <span className="text-sm font-light text-[#1F3A36]">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

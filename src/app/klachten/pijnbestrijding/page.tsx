@@ -86,6 +86,13 @@ export default function PijnbestrijdingPage() {
 
         <article className="py-20 relative z-10 bg-white">
           <div className="max-w-3xl mx-auto px-6 space-y-16">
+            {/* Featured Snippet — targets "Helpt acupunctuur bij pijnbestrijding?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur is een bewezen methode voor pijnbestrijding die door de WHO erkend wordt. Het stimuleert de aanmaak van endorfines, moduleert het zenuwstelsel en vermindert centrale sensitisatie. Effectief bij chronische pijn, zenuwpijn en pijn na operaties — zonder de bijwerkingen van langdurig medicijngebruik.
+              </p>
+            </div>
             <section>
               <h2 className="text-3xl font-normal text-[#1F3A36] tracking-tight mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Wat is chronische pijn?</h2>
               <p className="text-base text-[#1F3A36]/80 font-light leading-relaxed mb-4">Pijn die langer dan drie maanden aanhoudt wordt beschouwd als chronische pijn. In tegenstelling tot acute pijn — die een waarschuwingssignaal is voor schade — heeft chronische pijn zijn beschermende functie verloren en is het een aandoening op zich geworden. Het pijnsysteem is als het ware op hol geslagen: de drempel voor pijnperceptie is verlaagd (centrale sensitisatie) en het brein heeft pijnpatronen ingesleten die moeilijk te doorbreken zijn.</p>
@@ -243,6 +250,39 @@ export default function PijnbestrijdingPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
             </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-[#FAF8F3] border-t border-[#1F3A36]/10">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-8"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { href: "/klachten/lage-rugklachten", label: "Lage rugklachten" },
+                { href: "/klachten/migraine", label: "Migraine" },
+                { href: "/klachten/hoofdpijn", label: "Hoofdpijn" },
+                { href: "/klachten/stressklachten", label: "Stressklachten" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-[#1F3A36]/10 hover:border-[#4A6559]/40 hover:bg-[#F2EDE3] transition-colors group"
+                  >
+                    <iconify-icon
+                      icon="solar:alt-arrow-right-linear"
+                      className="text-[#4A6559] group-hover:translate-x-0.5 transition-transform"
+                    />
+                    <span className="text-sm font-light text-[#1F3A36]">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

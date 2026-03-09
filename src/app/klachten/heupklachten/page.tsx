@@ -154,6 +154,13 @@ export default function HeupklachtenPage() {
         {/* Content Article */}
         <article className="py-20 relative z-10 bg-white">
           <div className="max-w-3xl mx-auto px-6 space-y-16">
+            {/* Featured Snippet — targets "Helpt acupunctuur bij heupklachten?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur verlicht heuppijn door ontstekingen te remmen, zenuwen te kalmeren en omliggende spieren te ontspannen. Onderzoek toont aan dat acupunctuur pijn bij heuparthrose en bursitis significant vermindert en de beweeglijkheid verbetert — ook als andere behandelingen onvoldoende helpen.
+              </p>
+            </div>
             <section>
               <h2
                 className="text-3xl font-normal text-[#1F3A36] tracking-tight mb-6"
@@ -512,6 +519,39 @@ export default function HeupklachtenPage() {
                 className="md:h-10 bg-center w-auto h-8 object-cover"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-[#FAF8F3] border-t border-[#1F3A36]/10">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-8"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { href: "/klachten/kniepijn", label: "Kniepijn" },
+                { href: "/klachten/lage-rugklachten", label: "Lage rugklachten" },
+                { href: "/klachten/ischias", label: "Ischias" },
+                { href: "/klachten/artrose", label: "Artrose" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-[#1F3A36]/10 hover:border-[#4A6559]/40 hover:bg-[#F2EDE3] transition-colors group"
+                  >
+                    <iconify-icon
+                      icon="solar:alt-arrow-right-linear"
+                      className="text-[#4A6559] group-hover:translate-x-0.5 transition-transform"
+                    />
+                    <span className="text-sm font-light text-[#1F3A36]">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

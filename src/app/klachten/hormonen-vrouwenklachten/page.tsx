@@ -134,6 +134,14 @@ export default function HormonenVrouwenklachtenPage() {
           </div>
         </header>
 
+        {/* Featured Snippet — targets "Helpt acupunctuur bij hormonen en vrouwenklachten?" */}
+        <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 max-w-4xl mx-auto px-6 mt-8">
+          <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+          <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+            Ja. Acupunctuur ondersteunt vrouwelijke hormoonbalans door de regelcentra in de hypothalamus en hypofyse te optimaliseren, de bekkendoorbloeding te verbeteren en stress te verminderen. Effectief bij menstruatieklachten, overgangsklachten, PCOS, vruchtbaarheidsproblemen en hormonale stemmingswisselingen.
+          </p>
+        </div>
+
         {/* Waarom werkt acupunctuur bij hormoonklachten? */}
         <section className="py-16 bg-white relative z-10 border-y border-[#1F3A36]/5">
           <div className="max-w-4xl mx-auto px-6">
@@ -374,6 +382,38 @@ export default function HormonenVrouwenklachtenPage() {
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-cover bg-center" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-white border-b border-[#1F3A36]/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-2 text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <p className="text-sm text-[#1F3A36]/60 font-light text-center mb-8">
+              Acupunctuur helpt ook bij deze verwante klachten
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { href: "/klachten/menstruatieklachten", label: "Menstruatieklachten" },
+                { href: "/klachten/overgangsklachten", label: "Overgangsklachten" },
+                { href: "/klachten/hormonale-disbalans", label: "Hormonale Disbalans" },
+                { href: "/klachten/vruchtbaarheidsproblemen", label: "Vruchtbaarheidsproblemen" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="klacht-card-link flex items-center justify-between gap-2 bg-[#FAF8F3] hover:bg-[#F2EDE3] border border-[#1F3A36]/10 rounded-xl px-5 py-4 transition-colors duration-200 group"
+                >
+                  <span className="text-sm font-medium text-[#1F3A36]">{item.label}</span>
+                  <iconify-icon icon="solar:alt-arrow-right-linear" className="arrow-icon text-[#4A6559] text-base shrink-0 transition-transform duration-200" />
+                </Link>
+              ))}
             </div>
           </div>
         </section>

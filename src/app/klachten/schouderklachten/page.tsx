@@ -119,6 +119,13 @@ export default function SchouderklachtenPage() {
         {/* Content article */}
         <article className="py-16 bg-white border-y border-[#1F3A36]/5">
           <div className="max-w-4xl mx-auto px-6 space-y-16">
+            {/* Featured Snippet — targets "Helpt acupunctuur bij schouderklachten?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur vermindert schouderpijn door ontstekingen te remmen, de bloedcirculatie te verbeteren en verkrampte spieren te ontspannen. Het is effectief bij frozen shoulder, RSI, bursitis en tenniselleboog. Wetenschappelijk onderzoek bevestigt significante pijnvermindering en verbeterde schoudermobiliteit na een traject van acupunctuurbehandelingen.
+              </p>
+            </div>
 
             {/* Wat zijn schouderklachten */}
             <section>
@@ -304,6 +311,39 @@ export default function SchouderklachtenPage() {
         </section>
 
         <TrustBar />
+
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-[#FAF8F3] border-t border-[#1F3A36]/10">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-8"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { href: "/klachten/nekklachten", label: "Nekklachten" },
+                { href: "/klachten/frozen-shoulder", label: "Frozen shoulder" },
+                { href: "/klachten/rsi", label: "RSI / Muisarm" },
+                { href: "/klachten/kniepijn", label: "Kniepijn" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-[#1F3A36]/10 hover:border-[#4A6559]/40 hover:bg-[#F2EDE3] transition-colors group"
+                  >
+                    <iconify-icon
+                      icon="solar:alt-arrow-right-linear"
+                      className="text-[#4A6559] group-hover:translate-x-0.5 transition-transform"
+                    />
+                    <span className="text-sm font-light text-[#1F3A36]">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* CTA */}
         <section id="contact" aria-labelledby="cta-titel" className="overflow-hidden bg-[#1F3A36] pt-32 pb-32 relative">

@@ -131,6 +131,14 @@ export default function HooikoortsPage() {
           </div>
         </section>
 
+        {/* Featured Snippet — targets "Helpt acupunctuur bij hooikoorts?" */}
+        <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 max-w-4xl mx-auto mt-8 mb-0 px-8">
+          <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+          <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+            Ja. Acupunctuur verlicht hooikoortsklachten door het immuunsysteem te moduleren, de histaminerespons te dempen en de luchtwegen te ontspannen. Studies tonen aan dat het neusverstopping, jeukende ogen en niezen significant vermindert — effectief als preventieve behandeling vóór het pollenseizoen én ter verlichting tijdens acute klachten.
+          </p>
+        </div>
+
         {/* Wat is hooikoorts */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -385,42 +393,33 @@ export default function HooikoortsPage() {
         </section>
 
         {/* Gerelateerde klachten */}
-        <section className="py-12 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-16 bg-white border-b border-[#1F3A36]/10">
+          <div className="max-w-5xl mx-auto px-6">
             <h2
-              className="text-2xl font-light text-[#1F3A36] mb-6"
-              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-2 text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Gerelateerde klachten
             </h2>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/klachten/luchtwegen-allergieen"
-                className="klacht-link text-[#4A6559] hover:text-[#1F3A36] transition-colors"
-              >
-                Luchtwegen &amp; allergieën overzicht
-              </Link>
-              <span className="text-[#8A6B3D]">·</span>
-              <Link
-                href="/klachten/astma"
-                className="klacht-link text-[#4A6559] hover:text-[#1F3A36] transition-colors"
-              >
-                Astma
-              </Link>
-              <span className="text-[#8A6B3D]">·</span>
-              <Link
-                href="/klachten/sinusitis"
-                className="klacht-link text-[#4A6559] hover:text-[#1F3A36] transition-colors"
-              >
-                Sinusitis
-              </Link>
-              <span className="text-[#8A6B3D]">·</span>
-              <Link
-                href="/welke-klachten"
-                className="klacht-link text-[#4A6559] hover:text-[#1F3A36] transition-colors"
-              >
-                Alle klachten
-              </Link>
+            <p className="text-sm text-[#1F3A36]/60 font-light text-center mb-8">
+              Acupunctuur helpt ook bij deze verwante klachten
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { href: "/klachten/allergische-klachten", label: "Allergische Klachten" },
+                { href: "/klachten/luchtwegen-allergieen", label: "Luchtwegallergieën" },
+                { href: "/klachten/astma", label: "Astma" },
+                { href: "/klachten/sinusitis", label: "Sinusitis" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="klacht-card-link flex items-center justify-between gap-2 bg-[#FAF8F3] hover:bg-[#F2EDE3] border border-[#1F3A36]/10 rounded-xl px-5 py-4 transition-colors duration-200 group"
+                >
+                  <span className="text-sm font-medium text-[#1F3A36]">{item.label}</span>
+                  <iconify-icon icon="solar:alt-arrow-right-linear" className="arrow-icon text-[#4A6559] text-base shrink-0 transition-transform duration-200" />
+                </Link>
+              ))}
             </div>
           </div>
         </section>

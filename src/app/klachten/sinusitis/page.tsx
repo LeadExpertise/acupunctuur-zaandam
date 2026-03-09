@@ -122,6 +122,15 @@ export default function SinusitisPage() {
 
         <article className="py-20 relative z-10 bg-white">
           <div className="max-w-3xl mx-auto px-6 space-y-16">
+
+            {/* Featured Snippet — targets "Helpt acupunctuur bij sinusitis?" */}
+            <div className="bg-[#F2EDE3] border-l-4 border-[#4A6559] rounded-r-xl p-6 -mb-4">
+              <p className="text-[10px] font-semibold text-[#8A6B3D] tracking-widest uppercase mb-2">Kort antwoord</p>
+              <p className="text-base text-[#1F3A36]/90 font-light leading-relaxed">
+                Ja. Acupunctuur verlicht sinusitis door de doorbloeding van de neusbijholten te verbeteren, ontsteking te remmen en slijmvorming te verminderen. Effectief bij acute en chronische sinusitis, met name wanneer antibiotica herhaaldelijk zijn gebruikt maar klachten blijven terugkeren. Verlicht pijn, druk en verstopping.
+              </p>
+            </div>
+
             <section>
               <h2 className="text-3xl font-normal text-[#1F3A36] tracking-tight mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Wat is sinusitis?
@@ -328,6 +337,38 @@ export default function SinusitisPage() {
         </section>
 
         {/* CTA */}
+        {/* Gerelateerde klachten */}
+        <section className="py-16 bg-white border-b border-[#1F3A36]/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <h2
+              className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-2 text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Gerelateerde klachten
+            </h2>
+            <p className="text-sm text-[#1F3A36]/60 font-light text-center mb-8">
+              Acupunctuur helpt ook bij deze verwante klachten
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { href: "/klachten/hooikoorts", label: "Hooikoorts" },
+                { href: "/klachten/allergische-klachten", label: "Allergische Klachten" },
+                { href: "/klachten/hoofdpijn", label: "Hoofdpijn" },
+                { href: "/klachten/nekklachten", label: "Nekklachten" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="klacht-card-link flex items-center justify-between gap-2 bg-[#FAF8F3] hover:bg-[#F2EDE3] border border-[#1F3A36]/10 rounded-xl px-5 py-4 transition-colors duration-200 group"
+                >
+                  <span className="text-sm font-medium text-[#1F3A36]">{item.label}</span>
+                  <iconify-icon icon="solar:alt-arrow-right-linear" className="arrow-icon text-[#4A6559] text-base shrink-0 transition-transform duration-200" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="contact" aria-labelledby="cta-titel" className="overflow-hidden text-center bg-[#1F3A36] pt-32 pb-32 relative">
           <div className="relative z-20 w-full max-w-6xl mx-auto px-6 text-left">
             <div className="absolute w-[200vw] h-[200vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#4A6559]/30 via-transparent to-transparent opacity-80 pointer-events-none -z-10" />
