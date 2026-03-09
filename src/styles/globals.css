@@ -25,6 +25,17 @@ body {
   background-size: 100% 1px;
 }
 
+/* Klacht card link: lift + arrow slide animation */
+.klacht-card-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.klacht-card-link:hover {
+  transform: translateY(-2px);
+}
+.klacht-card-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
 /* Hide AI page-builder injected content (no-op in production) */
 [data-element-id="aura-emmgkucac3ghb8gsl"] + div { display: none !important; }
 [data-element-id="aura-emmgkucac3ghb8gsl"] ~ div { display: none !important; }

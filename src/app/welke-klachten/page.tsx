@@ -116,7 +116,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Pijnklachten &amp; beweging
+                  <Link href="/klachten/pijnklachten-en-beweging" className="hover:text-[#4A6559] transition-colors">
+                    Pijnklachten &amp; beweging
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/lage-rugklachten" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Lage rugklachten</a></li>
@@ -143,7 +145,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Hoofd &amp; zenuwstelsel
+                  <Link href="/klachten/hoofd-zenuwstelsel" className="hover:text-[#4A6559] transition-colors">
+                    Hoofd &amp; zenuwstelsel
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/hoofdpijn" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Hoofdpijn</a></li>
@@ -167,7 +171,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Stress, energie &amp; mentaal
+                  <Link href="/klachten/stress-energie-mentaal" className="hover:text-[#4A6559] transition-colors">
+                    Stress, energie &amp; mentaal
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/stressklachten" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Stressklachten &amp; Spanning</a></li>
@@ -190,7 +196,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Hormonen &amp; vrouwenklachten
+                  <Link href="/klachten/hormonen-vrouwenklachten" className="hover:text-[#4A6559] transition-colors">
+                    Hormonen &amp; vrouwenklachten
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/menstruatieklachten" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Menstruatieklachten &amp; PMS</a></li>
@@ -214,7 +222,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Spijsvertering &amp; buik
+                  <Link href="/klachten/spijsvertering-buik" className="hover:text-[#4A6559] transition-colors">
+                    Spijsvertering &amp; buik
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/maagklachten" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Maagklachten</a></li>
@@ -237,7 +247,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Luchtwegen &amp; allergieën
+                  <Link href="/klachten/luchtwegen-allergieen" className="hover:text-[#4A6559] transition-colors">
+                    Luchtwegen &amp; allergieën
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/ademhalingsproblemen" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Ademhalingsproblemen</a></li>
@@ -258,7 +270,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Immuunsysteem &amp; herstel
+                  <Link href="/klachten/immuunsysteem-herstel" className="hover:text-[#4A6559] transition-colors">
+                    Immuunsysteem &amp; herstel
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/verminderde-weerstand" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Verminderde weerstand</a></li>
@@ -277,7 +291,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Blaas &amp; urogenitaal
+                  <Link href="/klachten/blaas-urogenitaal" className="hover:text-[#4A6559] transition-colors">
+                    Blaas &amp; urogenitaal
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/blaasklachten" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Blaasklachten</a></li>
@@ -296,7 +312,9 @@ export default function WelkeKlachtenPage() {
                   className="text-2xl font-normal text-[#1F3A36] tracking-tight mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Leefstijl &amp; ondersteuning
+                  <Link href="/klachten/leefstijl-ondersteuning" className="hover:text-[#4A6559] transition-colors">
+                    Leefstijl &amp; ondersteuning
+                  </Link>
                 </h2>
                 <ul className="space-y-3 mt-auto flex-grow list-none p-0 text-sm font-light text-[#1F3A36]/80">
                   <li><a href="/klachten/stoppen-met-roken" className="klacht-link hover:text-[#4A6559] focus:outline-none focus:ring-1 focus:ring-[#1F3A36] rounded-sm">Stoppen met roken</a></li>
