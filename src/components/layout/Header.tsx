@@ -1,4 +1,6 @@
 // CSS-only mobile menu via checkbox peer trick – no "use client" needed
+import Link from "next/link";
+
 export default function Header() {
   return (
     <nav aria-label="Hoofdnavigatie" className="fixed top-0 left-0 right-0 z-50 flex flex-col">
@@ -35,18 +37,13 @@ export default function Header() {
             role="list"
           >
             <li>
-              <a href="#klachten" className="text-sm font-normal text-[#1F3A36]/80 hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 rounded-sm px-1 py-0.5">
-                Klachten
-              </a>
+              <Link href="/#klachten" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+                Welke klachten
+              </Link>
             </li>
             <li>
-              <a href="#behandeling" className="text-sm font-normal text-[#1F3A36]/80 hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 rounded-sm px-1 py-0.5">
-                Behandeling
-              </a>
-            </li>
-            <li>
-              <a href="#werkwijze" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
-                Werkwijze
+              <a href="#behandeling-werkwijze" className="text-sm font-normal text-[#1F3A36]/80 hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 rounded-sm px-1 py-0.5">
+                Behandeling &amp; werkwijze
               </a>
             </li>
             <li>
@@ -57,6 +54,11 @@ export default function Header() {
             <li>
               <a href="#over-ons" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
                 Over ons
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+                Veelgestelde vragen
               </a>
             </li>
           </ul>

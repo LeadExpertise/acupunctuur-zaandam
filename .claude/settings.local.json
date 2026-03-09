@@ -15,7 +15,10 @@
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm audit:*)",
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm run:*)",
       "Bash(git:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" /tmp/node-v20.19.0-darwin-x64/bin/npm run:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" /tmp/node-v20.19.0-darwin-x64/bin/npx next:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" /tmp/node-v20.19.0-darwin-x64/bin/node:*)"
     ]
   }
 }

@@ -63,8 +63,8 @@ export default function Reviews() {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 shrink-0 rounded-full bg-[#34a853] text-white flex items-center justify-center text-base font-medium">J</div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Johan d. B.</p>
-                  <p className="text-xs text-gray-500 mt-0.5">5 reviews</p>
+                  <p className="text-sm font-medium text-gray-900">Koen L.</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Google Review</p>
                 </div>
               </div>
               <iconify-icon icon="logos:google-icon" className="text-xl mt-1" />
@@ -78,7 +78,8 @@ export default function Reviews() {
               <span className="text-xs text-gray-500 ml-2">Een maand geleden</span>
             </div>
             <p className="text-sm text-gray-700 leading-relaxed flex-grow">
-              Jarenlang dacht ik dat mijn chronische rugpijn iets was waar ik mee moest leren leven. Na een gericht behandelplan in deze praktijk sta ik weer energiek op. Zeer kundig.
+              In de voorbereiding op mijn eerste marathon kwam een oude enkelblessure meer opspelen.
+              Drie behandeling ben ik ondergaan in drie weken en het had meteen al een enorm merkbaar effect na de eerste behandeling. Ik kon probleemloos verder gaan trainen voor de marathon en deze heb ik uiteindelijk met plezier en zonder pijn uitgelopen.
             </p>
           </div>
 
@@ -116,12 +117,20 @@ export default function Reviews() {
           <p className="text-sm text-[#1F3A36]/80 font-light mb-6 max-w-lg">
             Om de hoogste kwaliteit en persoonlijke aandacht te garanderen, nemen wij momenteel slechts een beperkt aantal nieuwe intakes per maand aan.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-transparent border border-[#1F3A36]/30 text-[#1F3A36] text-sm font-medium hover:bg-[#F2EDE3] hover:border-[#1F3A36]/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2"
-          >
-            Bekijk beschikbaarheid
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a
+              href="#ervaringen"
+              className="inline-flex items-center justify-center gap-2 hover:bg-[#4A6559] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 sm:w-auto text-sm font-medium text-[#FAF8F3] bg-[#1F3A36] w-full rounded-sm pt-3.5 pr-8 pb-3.5 pl-8"
+            >
+              Lees alle ervaringen
+            </a>
+            <a
+              href="#faq"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-transparent border border-[#1F3A36]/30 text-[#1F3A36] text-sm font-medium hover:bg-[#F2EDE3] hover:border-[#1F3A36]/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 w-full sm:w-auto"
+            >
+              Veelgestelde vragen
+            </a>
+          </div>
         </div>
 
       </div>

@@ -13,6 +13,18 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
+/* Animated underline for klacht links */
+.klacht-link {
+  background-image: linear-gradient(to right, #4A6559 0%, #4A6559 100%);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+.klacht-link:hover {
+  background-size: 100% 1px;
+}
+
 /* Hide AI page-builder injected content (no-op in production) */
 [data-element-id="aura-emmgkucac3ghb8gsl"] + div { display: none !important; }
 [data-element-id="aura-emmgkucac3ghb8gsl"] ~ div { display: none !important; }
