@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Acupunctuur Zaandam",
   description:
     "Professionele acupunctuurpraktijk in Zaandam. Behandelingen voor pijn, stress, burnout en meer.",
-  url: "https://acupunctuur-zaandam.nl",
+  url: "https://www.acupunctuurzaandam.nl",
   locale: "nl_NL",
 };
 

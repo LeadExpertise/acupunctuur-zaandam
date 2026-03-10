@@ -2,7 +2,7 @@ import { readdirSync } from "fs";
 import { join } from "path";
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://acupunctuur-zaandam.nl";
+const BASE_URL = "https://www.acupunctuurzaandam.nl";
 
 function getSubdirectories(dir: string): string[] {
   try {
