@@ -29,7 +29,8 @@
       "Bash(rm:*)",
       "Bash(python3:*)",
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" node:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" find:*)"
     ]
   }
 }

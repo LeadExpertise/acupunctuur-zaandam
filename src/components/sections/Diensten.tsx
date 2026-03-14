@@ -57,7 +57,7 @@ export default function Diensten() {
                 Ontdek bij welke klachten acupunctuur kan helpen, zoals pijnklachten, stress, vermoeidheid en meer.
               </p>
               <a
-                href="/klachten"
+                href="/welke-klachten"
                 className="inline-flex items-center justify-center hover:bg-[#4A6559] hover:text-[#FAF8F3] transition-all duration-300 hover:border-[#FAF8F3]/20 focus:outline-none text-sm font-medium text-[#1F3A36] bg-[#FAF8F3] w-full border-transparent border rounded-xl mt-auto pt-3.5 pr-6 pb-3.5 pl-6"
               >
                 Ontdek alle klachten
@@ -91,7 +91,7 @@ export default function Diensten() {
                 Lees hoe een behandeling verloopt en hoe acupunctuur helpt om het lichaam weer in balans te brengen.
               </p>
               <a
-                href="/werkwijze"
+                href="/behandeling-werkwijze"
                 className="inline-flex items-center justify-center hover:bg-[#4A6559] hover:text-[#FAF8F3] transition-all duration-300 hover:border-[#FAF8F3]/20 focus:outline-none text-sm font-medium text-[#1F3A36] bg-[#FAF8F3] w-full border-transparent border rounded-xl mt-auto pt-3.5 pr-6 pb-3.5 pl-6"
               >
                 Lees de werkwijze
@@ -125,7 +125,7 @@ export default function Diensten() {
                 Leer meer over Sam de Vries, zijn achtergrond als psycholoog en zijn visie op Chinese geneeskunde.
               </p>
               <a
-                href="/over-sam"
+                href="/over-de-praktijk"
                 className="inline-flex items-center justify-center w-full px-6 py-3.5 rounded-xl bg-[#FAF8F3] text-[#1F3A36] text-sm font-medium hover:bg-[#4A6559] hover:text-[#FAF8F3] transition-all duration-300 mt-auto border border-transparent hover:border-[#FAF8F3]/20 focus:outline-none"
               >
                 Meer over Sam

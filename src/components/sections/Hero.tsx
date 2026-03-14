@@ -36,7 +36,7 @@ export default function Hero() {
             Maak een afspraak
           </a>
           <a
-            href="#filosofie"
+            href="/tarieven-vergoeding"
             className="sm:w-auto inline-flex items-center justify-center gap-2 hover:bg-[#F2EDE3] hover:border-[#1F3A36]/50 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F3] text-sm font-normal text-[#1F3A36] bg-transparent w-full border-[#1F3A36]/30 border rounded-sm pt-3.5 pr-8 pb-3.5 pl-8"
           >
             Tarieven &amp; vergoeding

@@ -4,23 +4,53 @@ import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.acupunctuurzaandam.nl";
 
+// Next.js generates a sitemap index at /sitemap.xml and individual sitemaps at:
+//   /sitemap/pages.xml      — homepage + informational pages
+//   /sitemap/klachten.xml   — 72 klachten detail pages
+//   /sitemap/behandelingen.xml — 63 behandelingen pages
+
+export function generateSitemaps() {
+  return [
+    { id: "pages" },
+    { id: "klachten" },
+    { id: "behandelingen" },
+  ];
+}
+
 function getSubdirectories(dir: string): string[] {
   try {
     return readdirSync(dir, { withFileTypes: true })
       .filter((entry) => entry.isDirectory())
-      .map((entry) => entry.name);
+      .map((entry) => entry.name)
+      .sort();
   } catch {
     return [];
   }
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap({ id }: { id: string }): MetadataRoute.Sitemap {
   const appDir = join(process.cwd(), "src", "app");
 
-  const klachtenSlugs = getSubdirectories(join(appDir, "klachten"));
-  const behandelingenSlugs = getSubdirectories(join(appDir, "behandelingen"));
+  if (id === "klachten") {
+    return getSubdirectories(join(appDir, "klachten")).map((slug) => ({
+      url: `${BASE_URL}/klachten/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }));
+  }
 
-  const staticPages: MetadataRoute.Sitemap = [
+  if (id === "behandelingen") {
+    return getSubdirectories(join(appDir, "behandelingen")).map((slug) => ({
+      url: `${BASE_URL}/behandelingen/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
+  }
+
+  // "pages" — homepage + informational pages
+  return [
     {
       url: BASE_URL,
       lastModified: new Date(),
@@ -58,22 +88,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
-
-  const klachtenPages: MetadataRoute.Sitemap = klachtenSlugs.map((slug) => ({
-    url: `${BASE_URL}/klachten/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
-
-  const behandelingenPages: MetadataRoute.Sitemap = behandelingenSlugs.map(
-    (slug) => ({
-      url: `${BASE_URL}/behandelingen/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    })
-  );
-
-  return [...staticPages, ...klachtenPages, ...behandelingenPages];
 }
