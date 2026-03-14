@@ -14,6 +14,7 @@
  *   node scripts/generate-blog-draft.mjs --topic 4
  */
 
+import 'dotenv/config'
 import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
