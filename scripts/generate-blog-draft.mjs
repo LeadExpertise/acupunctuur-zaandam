@@ -293,7 +293,7 @@ Gebruik dit exacte schema:
   "slug": "${entry.slug}",
   "excerpt": "Korte samenvatting van 1-2 zinnen voor de blogkaart (max 160 tekens)",
   "date": "${today()}",
-  "status": "draft",
+  "status": "published",
   "category": "${entry.category}",
   "tags": ["tag1", "tag2", "tag3", "tag4"],
   "seoTitle": "SEO-paginatitel (max 60 tekens) | Acupunctuur Zaandam",
@@ -364,14 +364,14 @@ async function main() {
 
   // Force slug and status to match what we expect
   post.slug = entry.slug;
-  post.status = "draft";
+  post.status = "published";
 
   // Write file
   const outputPath = join(BLOG_DIR, `${entry.slug}.json`);
   writeFileSync(outputPath, JSON.stringify(post, null, 2) + "\n", "utf8");
 
   console.log(`✅  Draft saved to: content/blog/${entry.slug}.json`);
-  console.log(`\n    To publish: remove or change the "status": "draft" line.`);
+  console.log(`\n    To publish: remove or change the "status": "published" line.`);
   console.log(`    To preview locally: run npm run dev and visit /blog/${entry.slug}\n`);
 }
 
