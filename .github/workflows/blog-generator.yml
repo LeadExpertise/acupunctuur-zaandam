@@ -2,8 +2,11 @@ name: Generate Blog Post
 
 on:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "0 6 * * 1"   # elke maandag om 06:00 UTC
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   generate-blog:
