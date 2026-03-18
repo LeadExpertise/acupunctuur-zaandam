@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
@@ -35,7 +36,21 @@ export default function RootLayout({
           src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
           strategy="afterInteractive"
         />
-
+<Script
+  id="sa-dynamic-optimization"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `(function(){
+      var script = document.createElement("script");
+      script.setAttribute("nowprocket","");
+      script.setAttribute("nitro-exclude","");
+      script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+      script.dataset.uuid = "22688c06-d420-48c8-9d36-a043272702e6";
+      script.id = "sa-dynamic-optimization-loader";
+      document.head.appendChild(script);
+    })();`,
+  }}
+/>
         {/* Skip to main content – accessibility */}
         <a
           href="#main-content"
