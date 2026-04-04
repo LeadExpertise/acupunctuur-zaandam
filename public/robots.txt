@@ -4,4 +4,7 @@ Allow: /
 Disallow: /_next/
 Disallow: /api/
 
-Sitemap: https://www.acupunctuurzaandam.nl/sitemap.xml
+Sitemap: https://www.acupunctuurzaandam.nl/sitemap/pages.xml
+Sitemap: https://www.acupunctuurzaandam.nl/sitemap/klachten.xml
+Sitemap: https://www.acupunctuurzaandam.nl/sitemap/behandelingen.xml
+Sitemap: https://www.acupunctuurzaandam.nl/sitemap/blog.xml

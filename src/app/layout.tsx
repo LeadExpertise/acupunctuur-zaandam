@@ -150,6 +150,15 @@ gtag('config', 'G-QVP2D9QN30');`,
                 { "@type": "City", name: "Assendelft" },
               ],
               medicalSpecialty: "Acupuncture",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "3",
+                bestRating: "5",
+                worstRating: "1",
+              },
+              hasMap:
+                "https://www.google.com/maps/place/Lagendijk+3,+1541+KA+Koog+aan+de+Zaan",
             }),
           }}
         />

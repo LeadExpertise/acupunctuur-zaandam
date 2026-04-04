@@ -3,9 +3,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Acupunctuur Koog aan de Zaan | Dichtbij in Zaandam",
+  title: "Acupunctuur Koog aan de Zaan — NVA Erkend",
   description:
-    "Woont u in Koog aan de Zaan? Acupunctuurpraktijk Sam de Vries in Zaandam is binnen 5 minuten bereikbaar. NVA-erkend, behandelingen bij hooikoorts, nekpijn, vermoeidheid, migraine en overgangsklachten.",
+    "Acupunctuurpraktijk aan de Lagendijk in Koog aan de Zaan. Sam de Vries behandelt hooikoorts, nekpijn, vermoeidheid en migraine. NVA-erkend, vergoed door zorgverzekeraars.",
   keywords: [
     "acupunctuur koog aan de zaan",
     "acupuncturist koog aan de zaan",
@@ -15,10 +15,13 @@ export const metadata: Metadata = {
     "acupunctuur overgang koog aan de zaan",
     "chinese geneeskunde zaanstreek",
   ],
+  alternates: {
+    canonical: "https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan",
+  },
   openGraph: {
-    title: "Acupunctuur Koog aan de Zaan | Praktijk Sam de Vries",
+    title: "Acupunctuur Koog aan de Zaan — Sam de Vries",
     description:
-      "Acupunctuurpraktijk op 5 minuten van Koog aan de Zaan. NVA-erkend, vergoed door de meeste zorgverzekeraars.",
+      "NVA-erkende acupunctuurpraktijk aan de Lagendijk in Koog aan de Zaan. Behandelingen bij hooikoorts, nekpijn en meer.",
     url: "https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan",
   },
 };
@@ -77,6 +80,14 @@ const jsonLd = {
             text: "De reguliere openingstijden zijn maandag tot en met vrijdag van 9:00 tot 17:00. Neem contact op via WhatsApp om de mogelijkheden te bespreken als deze tijden niet uitkomen.",
           },
         },
+        {
+          "@type": "Question",
+          name: "Hoeveel behandelingen heb ik nodig?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Dat verschilt per klacht en per persoon. Acute klachten verbeteren vaak in 3 tot 5 sessies. Bij chronische klachten is een langer traject gebruikelijk. Sam bespreekt dit met u na de intake.",
+          },
+        },
       ],
     },
   ],
@@ -90,6 +101,31 @@ export default function AcupunctuurKoogAanDeZaanPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-koog"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acupunctuurzaandam.nl",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Acupunctuur Koog aan de Zaan",
+                item: "https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan",
+              },
+            ],
+          }),
+        }}
       />
 
       <main id="main-content">
@@ -338,6 +374,10 @@ export default function AcupunctuurKoogAanDeZaanPage() {
                   {
                     q: "Kan ik ook 's avonds terecht voor acupunctuur?",
                     a: "De reguliere openingstijden zijn maandag tot en met vrijdag van 9:00 tot 17:00. Neem contact op via WhatsApp om de mogelijkheden te bespreken als deze tijden niet uitkomen.",
+                  },
+                  {
+                    q: "Hoeveel behandelingen heb ik nodig?",
+                    a: "Dat verschilt per klacht en per persoon. Acute klachten verbeteren vaak in 3 tot 5 sessies. Bij chronische klachten is een langer traject gebruikelijk. Sam bespreekt dit met u na de intake.",
                   },
                 ].map((item) => (
                   <details

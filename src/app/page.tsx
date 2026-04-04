@@ -9,7 +9,7 @@ import FAQ from "@/components/sections/FAQ";
 export const metadata: Metadata = {
   title: "Acupunctuur Zaandam — Erkende Praktijk voor Pijn, Stress & Herstel",
   description:
-    "Acupunctuurpraktijk in Zaandam van Sam de Vries. Behandelingen bij pijn, stress, burnout, slaapproblemen, migraine en vrouwenklachten. NVA-erkend en vergoed door de meeste zorgverzekeraars.",
+    "NVA-erkende acupunctuurpraktijk van Sam de Vries in Zaandam. Behandelingen bij pijn, stress, burnout en meer. Vergoed door zorgverzekeraars.",
   keywords: [
     "acupunctuur zaandam",
     "acupuncturist zaandam",
@@ -20,10 +20,13 @@ export const metadata: Metadata = {
     "burnout acupunctuur",
     "migraine acupunctuur zaandam",
   ],
+  alternates: {
+    canonical: "https://www.acupunctuurzaandam.nl",
+  },
   openGraph: {
-    title: "Acupunctuur Zaandam — Erkende Praktijk voor Pijn, Stress & Herstel",
+    title: "Acupunctuur Zaandam — Praktijk Sam de Vries",
     description:
-      "NVA-erkende acupunctuurpraktijk van Sam de Vries in Zaandam. Behandelingen bij pijn, stress, burnout, slaapproblemen en meer. Vergoed door de meeste zorgverzekeraars.",
+      "NVA-erkende acupunctuurpraktijk in Zaandam. Behandelingen bij pijn, stress, burnout en meer. Vergoed door zorgverzekeraars.",
     url: "https://www.acupunctuurzaandam.nl",
   },
 };

@@ -3,9 +3,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Acupunctuur in Zaandam | Praktijk Sam de Vries — NVA Erkend",
+  title: "Acupunctuur Zaandam — Sam de Vries, NVA Erkend",
   description:
-    "Acupunctuurpraktijk in Zaandam. Sam de Vries behandelt pijn, stress, burnout, slaapproblemen en vrouwenklachten. NVA-erkend, vergoed door de meeste zorgverzekeraars. Lagendijk 3, Koog aan de Zaan.",
+    "Acupunctuurpraktijk in Zaandam van Sam de Vries. NVA-erkend, behandelingen bij pijn, stress, burnout en vrouwenklachten. Vergoed door zorgverzekeraars.",
   keywords: [
     "acupunctuur zaandam",
     "acupuncturist zaandam",
@@ -16,10 +16,13 @@ export const metadata: Metadata = {
     "burnout acupunctuur zaandam",
     "nva acupunctuur zaandam",
   ],
+  alternates: {
+    canonical: "https://www.acupunctuurzaandam.nl/acupunctuur-zaandam",
+  },
   openGraph: {
-    title: "Acupunctuur in Zaandam | Praktijk Sam de Vries",
+    title: "Acupunctuur Zaandam — Praktijk Sam de Vries",
     description:
-      "NVA-erkende acupunctuurpraktijk in Zaandam. Behandelingen bij pijn, stress, burnout en meer. Lagendijk 3, Koog aan de Zaan.",
+      "NVA-erkende acupunctuurpraktijk in Zaandam. Behandelingen bij pijn, stress, burnout en meer.",
     url: "https://www.acupunctuurzaandam.nl/acupunctuur-zaandam",
   },
 };
@@ -98,6 +101,31 @@ export default function AcupunctuurZaandamPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-zaandam"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acupunctuurzaandam.nl",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Acupunctuur Zaandam",
+                item: "https://www.acupunctuurzaandam.nl/acupunctuur-zaandam",
+              },
+            ],
+          }),
+        }}
       />
 
       <main id="main-content">

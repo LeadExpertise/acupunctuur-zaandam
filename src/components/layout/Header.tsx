@@ -60,6 +60,11 @@ export default function Header() {
                 Veelgestelde vragen
               </Link>
             </li>
+            <li>
+              <Link href="/blog" className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-4 text-sm font-normal text-[#1F3A36]/80 rounded-sm pt-0.5 pr-1 pb-0.5 pl-1">
+                Blog
+              </Link>
+            </li>
           </ul>
 
           <div className="flex items-center gap-2 sm:gap-4">
@@ -140,6 +145,11 @@ export default function Header() {
             <li>
               <Link href="/veelgestelde-vragen" onClick={close} className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
                 Veelgestelde vragen
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" onClick={close} className="text-base font-normal text-[#1F3A36] block pb-3 border-b border-[#1F3A36]/5">
+                Blog
               </Link>
             </li>
           </ul>

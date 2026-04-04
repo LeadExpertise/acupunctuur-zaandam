@@ -121,6 +121,11 @@ export default function Footer() {
                     Veelgestelde vragen
                   </Link>
                 </li>
+                <li>
+                  <Link href="/blog" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Blog
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>

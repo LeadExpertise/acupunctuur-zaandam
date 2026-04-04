@@ -25,6 +25,9 @@ export const defaultMetadata: Metadata = {
     "burnout",
   ],
   authors: [{ name: siteConfig.name }],
+  alternates: {
+    canonical: siteConfig.url,
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
@@ -40,6 +43,9 @@ export const defaultMetadata: Metadata = {
         alt: "Acupunctuur Zaandam — Sam de Vries",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   robots: {
     index: true,
