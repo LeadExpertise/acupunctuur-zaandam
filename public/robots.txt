@@ -1,0 +1,7 @@
+# Acupunctuur Zaandam — https://www.acupunctuurzaandam.nl
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+Sitemap: https://www.acupunctuurzaandam.nl/sitemap.xml

@@ -33,7 +33,8 @@
       "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" find:*)",
       "Bash(/tmp/node-v20.19.0-darwin-x64/bin/npm install:*)",
       "Bash(/tmp/node-v20.19.0-darwin-x64/bin/node:*)",
-      "Bash(/usr/local/bin/npm install:*)"
+      "Bash(/usr/local/bin/npm install:*)",
+      "Bash(PATH=\"/tmp/node-v20.19.0-darwin-x64/bin:$PATH\" npm run build)"
     ]
   }
 }

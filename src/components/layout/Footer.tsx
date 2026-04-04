@@ -62,8 +62,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: placeholder (Openingstijden) */}
-          <div />
+          {/* Col 3: Werkgebied */}
+          <div>
+            <h3
+              className="text-xs font-medium tracking-widest uppercase text-[#1F3A36] mb-8"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Werkgebied
+            </h3>
+            <nav aria-label="Locatiepagina's">
+              <ul className="space-y-3 text-sm text-[#1F3A36]/80 font-light list-none p-0 m-0">
+                <li>
+                  <Link href="/acupunctuur-zaandam" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Acupunctuur Zaandam
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/acupunctuur-koog-aan-de-zaan" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5 -ml-1 block w-fit">
+                    Acupunctuur Koog aan de Zaan
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
           {/* Col 4: Informatie */}
           <div>

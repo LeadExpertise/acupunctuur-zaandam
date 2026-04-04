@@ -27,9 +27,9 @@ const jsonLd = {
     "Praktijk voor acupunctuur en Traditionele Chinese Geneeskunde in Zaandam.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Ruststraat 12",
-    addressLocality: "Zaandam",
-    postalCode: "1506 AA",
+    streetAddress: "Lagendijk 3",
+    addressLocality: "Koog aan de Zaan",
+    postalCode: "1541 KA",
     addressCountry: "NL",
   },
   medicalSpecialty: "Acupuncture",

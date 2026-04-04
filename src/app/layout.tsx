@@ -90,6 +90,70 @@ gtag('config', 'G-QVP2D9QN30');`,
     })();`,
   }}
 />
+        {/* LocalBusiness / MedicalBusiness structured data */}
+        <Script
+          id="schema-local-business"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              "@id": "https://www.acupunctuurzaandam.nl/#practice",
+              name: "Acupunctuur Zaandam — Sam de Vries",
+              description:
+                "NVA-erkende acupunctuurpraktijk in Zaandam. Behandelingen bij pijn, stress, burnout, slaapproblemen, migraine en vrouwenklachten.",
+              url: "https://www.acupunctuurzaandam.nl",
+              telephone: "+31657998330",
+              logo: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
+              image:
+                "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
+              priceRange: "€€",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Lagendijk 3",
+                addressLocality: "Koog aan de Zaan",
+                postalCode: "1541 KA",
+                addressCountry: "NL",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 52.4387,
+                longitude: 4.8293,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "09:00",
+                  closes: "17:00",
+                },
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+31657998330",
+                contactType: "customer service",
+                availableLanguage: ["Dutch"],
+              },
+              areaServed: [
+                { "@type": "City", name: "Zaandam" },
+                { "@type": "City", name: "Koog aan de Zaan" },
+                { "@type": "City", name: "Wormerveer" },
+                { "@type": "City", name: "Zaandijk" },
+                { "@type": "City", name: "Krommenie" },
+                { "@type": "City", name: "Assendelft" },
+              ],
+              medicalSpecialty: "Acupuncture",
+            }),
+          }}
+        />
+
         {/* Skip to main content – accessibility */}
         <a
           href="#main-content"

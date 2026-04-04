@@ -32,6 +32,14 @@ export const defaultMetadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [
+      {
+        url: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
+        width: 320,
+        height: 64,
+        alt: "Acupunctuur Zaandam — Sam de Vries",
+      },
+    ],
   },
   robots: {
     index: true,
