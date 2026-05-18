@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
+import BookingWidget from "@/components/BookingWidget";
+import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/behandelingen/acupunctuur-overactieve-blaas" },
   title: "Acupunctuur bij Overactieve Blaas | Acupunctuur Zaandam",
   description:
     "Last van een overactieve blaas? Acupunctuur in Zaandam helpt bij frequente aandrang, urgency-incontinentie en nachtelijk plassen. Erkend NVA-acupuncturist, vergoeding mogelijk.",
@@ -473,25 +475,7 @@ export default function OveractieveBlaasBehandelingPage() {
         </section>
 
         {/* Trust bar */}
-        <section className="py-10 bg-white border-y border-[#4A6559]/10">
-          <div className="max-w-5xl mx-auto px-4">
-            <p className="text-center text-sm text-[#4A6559] mb-6 font-medium tracking-widest uppercase">
-              Erkend &amp; vergoed door
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e20f36d5-fa43-45b0-80bb-6be75fbddc32_800w.webp" alt="NVA Erkend Acupuncturist" className="md:h-12 w-auto h-10 object-cover bg-center" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/31e0e290-0757-46ba-a865-f2b818683b9d_320w.png" alt="VGZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a2e5dfdb-34c2-4807-8f43-9cce38479a8d_800w.jpg" alt="TCMA Certificering" className="md:h-12 w-auto h-10 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-cover bg-center" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
-            </div>
-          </div>
-        </section>
+        <TrustBadges />
 
         {/* CTA */}
         <section id="contact" className="py-24 bg-[#1F3A36]">
@@ -510,13 +494,7 @@ export default function OveractieveBlaasBehandelingPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="bg-white rounded-2xl overflow-hidden">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
-                  style={{ width: "100%", border: "none", minHeight: "500px" }}
-                  id="D8uouGkFZH4Alr37y5z4_behandeling_overactief_blaas"
-                  loading="lazy"
-                  title="Afspraak maken voor overactieve blaas"
-                />
+                <BookingWidget id="behandeling_overactief_blaas" />
               </div>
               <div className="space-y-6 text-[#FAF8F3]">
                 <div className="bg-[#4A6559]/30 rounded-2xl p-6">
@@ -556,8 +534,7 @@ export default function OveractieveBlaasBehandelingPage() {
             </div>
           </div>
         </section>
-        <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
-      </main>
+</main>
     </>
   );
 }

@@ -106,9 +106,9 @@ export default function Header() {
               <iconify-icon icon="solar:star-bold" className="text-sm" stroke-width="1.5" />
               <iconify-icon icon="solar:star-bold" className="text-sm" stroke-width="1.5" />
               <iconify-icon icon="solar:star-bold" className="text-sm" stroke-width="1.5" />
-              <iconify-icon icon="solar:star-half-circle-bold" className="text-sm" stroke-width="1.5" />
+              <iconify-icon icon="solar:star-bold" className="text-sm" stroke-width="1.5" />
             </div>
-            <span>4.6/5 Klantervaring</span>
+            <span>5.0/5 op Google</span>
           </div>
           <span className="hidden sm:block w-1 h-1 rounded-full bg-[#1F3A36]/30" />
           <span className="font-normal text-[#1F3A36]">Tijdelijk 10% korting op uw eerste sessie</span>

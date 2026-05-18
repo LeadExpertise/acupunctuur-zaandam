@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getPublishedPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog — Inzichten over Acupunctuur & Gezondheid | Acupunctuur Zaandam",
   description:
     "Lees artikelen over acupunctuur, traditionele Chinese geneeskunde, gezondheid en welzijn. Praktische inzichten van Acupunctuur Zaandam.",

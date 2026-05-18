@@ -31,22 +31,6 @@ export default function Footer() {
             >
               Een rustgevende praktijk voor natuurlijke genezing, geworteld in Traditionele Chinese Geneeskunde. Gespecialiseerd in behandelingen voor pijn, stress, burn-out en vermoeidheid.
             </p>
-            <div className="flex gap-4 text-[#1F3A36]/70">
-              <a
-                href="#"
-                aria-label="Bezoek onze Instagram pagina voor inspiratie en gezondheidstips"
-                className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm p-1"
-              >
-                <iconify-icon icon="solar:camera-linear" aria-hidden="true" className="text-xl" stroke-width="1.5" />
-              </a>
-              <a
-                href="#"
-                aria-label="Volg Acupunctuur Zaandam op Facebook"
-                className="hover:text-[#4A6559] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm p-1"
-              >
-                <iconify-icon icon="ic:outline-facebook" aria-hidden="true" className="text-xl" stroke-width="1.5" />
-              </a>
-            </div>
           </div>
 
           {/* Col 2: Contact & Adres */}
@@ -57,9 +41,28 @@ export default function Footer() {
             >
               Contact &amp; Adres
             </h3>
-            <ul className="space-y-2 text-sm text-[#1F3A36]/80 font-light list-none p-0 m-0">
-              <li>BedrijvigeBij Kamer: A103 Lagendijk 3 1541 KA Koog aan de Zaan</li>
-            </ul>
+            <address
+              itemProp="address"
+              itemScope
+              itemType="http://schema.org/PostalAddress"
+              className="not-italic space-y-3 text-sm text-[#1F3A36]/80 font-light"
+            >
+              <p className="leading-relaxed">
+                <span itemProp="streetAddress">BedrijvigeBij Kamer A103, Lagendijk 3</span>
+                <br />
+                <span itemProp="postalCode">1541 KA</span>{" "}
+                <span itemProp="addressLocality">Koog aan de Zaan</span>
+              </p>
+              <p>
+                <a
+                  href="tel:+31657998330"
+                  itemProp="telephone"
+                  className="hover:text-[#4A6559] hover:underline transition-colors"
+                >
+                  +31 6 5799 8330
+                </a>
+              </p>
+            </address>
           </div>
 
           {/* Col 3: Werkgebied */}
@@ -137,21 +140,21 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs text-[#1F3A36]/70 font-light text-center lg:text-left">
             <p>© 2026 Acupunctuur Zaandam. Alle rechten voorbehouden.</p>
             <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-[#1F3A36]/30" />
-            <p>KVK: 12345678</p>
+            <p>KvK: 68404441</p>
             <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-[#1F3A36]/30" />
-            <p>BTW: NL123456789B01</p>
+            <p>BTW: NL002282285B34</p>
           </div>
 
           <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs text-[#1F3A36]/70 font-light list-none p-0 m-0">
             <li>
-              <a href="/privacyverklaring" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5">
+              <Link href="/privacyverklaring" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5">
                 Privacyverklaring
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/algemene-voorwaarden" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5">
+              <Link href="/algemene-voorwaarden" className="hover:text-[#4A6559] hover:underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm px-1 py-0.5">
                 Algemene Voorwaarden
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

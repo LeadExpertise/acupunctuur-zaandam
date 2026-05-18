@@ -12,7 +12,7 @@ export default function Diensten() {
           className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-luminosity"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1640906152676-dace6710d24b?w=2160&q=80')",
+              "url('https://images.unsplash.com/photo-1640906152676-dace6710d24b?w=1200&q=60')",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#4A6559]/40 via-transparent to-transparent" />

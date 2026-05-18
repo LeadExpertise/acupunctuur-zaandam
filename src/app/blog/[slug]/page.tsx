@@ -31,10 +31,12 @@ export async function generateMetadata({
     title: post.seoTitle,
     description: post.metaDescription,
     keywords: post.tags,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.seoTitle,
       description: post.metaDescription,
       type: "article",
+      url: `/blog/${post.slug}`,
       publishedTime: post.date,
       tags: post.tags,
     },

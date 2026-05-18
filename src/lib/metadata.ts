@@ -8,6 +8,15 @@ export const siteConfig = {
   locale: "nl_NL",
 };
 
+const OG_IMAGE =
+  "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png";
+
+/**
+ * Root metadata for layout.tsx — page-level metadata is added in each page.tsx.
+ * Canonical + openGraph.url are intentionally NOT set here; every page sets its
+ * own via `pageMetadata()` so Google does not deduplicate all routes against
+ * the homepage URL.
+ */
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -25,19 +34,15 @@ export const defaultMetadata: Metadata = {
     "burnout",
   ],
   authors: [{ name: siteConfig.name }],
-  alternates: {
-    canonical: siteConfig.url,
-  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    url: siteConfig.url,
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
     images: [
       {
-        url: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
+        url: OG_IMAGE,
         width: 320,
         height: 64,
         alt: "Acupunctuur Zaandam — Sam de Vries",
@@ -59,3 +64,26 @@ export const defaultMetadata: Metadata = {
     },
   },
 };
+
+/**
+ * Helper to build per-page metadata with a guaranteed canonical + openGraph URL.
+ * Pass the absolute path (e.g. "/klachten/nekklachten"). metadataBase resolves
+ * it to the full URL automatically.
+ */
+export function pageMetadata(
+  path: string,
+  overrides: Metadata = {}
+): Metadata {
+  const { openGraph, alternates, ...rest } = overrides;
+  return {
+    ...rest,
+    alternates: {
+      canonical: path,
+      ...alternates,
+    },
+    openGraph: {
+      url: path,
+      ...openGraph,
+    },
+  };
+}

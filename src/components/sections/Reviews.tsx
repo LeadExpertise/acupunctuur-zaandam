@@ -1,6 +1,53 @@
+const reviews = [
+  {
+    name: "Koen Lindeman",
+    initial: "K",
+    bg: "#1a73e8",
+    meta: "Google Review",
+    timeAgo: "Een maand geleden",
+    text: "In de voorbereiding op mijn eerste marathon kwam een oude enkelblessure meer opspelen. Drie behandelingen in drie weken en het had meteen al een enorm merkbaar effect. Ik kon probleemloos doortrainen en heb de marathon met plezier en zonder pijn uitgelopen. Een aanrader!",
+  },
+  {
+    name: "Irene de Vries",
+    initial: "I",
+    bg: "#ea4335",
+    meta: "Google Review",
+    timeAgo: "2 maanden geleden",
+    text: "Prima behandeld. Ik ben belast met een chronische kwaal en ben met een behandeling per drie weken goed geholpen.",
+  },
+  {
+    name: "Guntug Yardimci",
+    initial: "G",
+    bg: "#34a853",
+    meta: "Google Review",
+    timeAgo: "3 maanden geleden",
+    text: "Ik had nooit eerder acupunctuur geprobeerd. Ik had last van vermoeidheidsklachten en stress. Sam luistert heel goed alvorens hij een behandeling toepast. Door hem ben ik heel snel opgeknapt!",
+  },
+  {
+    name: "Jasper Nederhoff",
+    initial: "J",
+    bg: "#fbbc04",
+    meta: "Google Review",
+    timeAgo: "4 maanden geleden",
+    text: "Fijne ervaring, open gesprekken, veilige setting en een resultaat meer dan ik had verwacht! Ben heel erg blij met Sam, zijn werk en passie.",
+  },
+  {
+    name: "Olga Steffhaan",
+    initial: "O",
+    bg: "#673ab7",
+    meta: "Google Review",
+    timeAgo: "5 maanden geleden",
+    text: "Ik kwam vorige week heel slecht lopend en met heel veel pijn bij Sam binnen. Na de behandeling stond ik op van de behandeltafel en kon ik tot mijn grote verbazing rechtop en met redelijk weinig pijn lopen.",
+  },
+];
+
 export default function Reviews() {
   return (
-    <section aria-labelledby="reviews-titel" className="py-32 bg-[#FAF8F3]">
+    <section
+      id="ervaringen"
+      aria-labelledby="reviews-titel"
+      className="py-32 bg-[#FAF8F3]"
+    >
       <div className="max-w-6xl mr-auto ml-auto pr-6 pl-6">
 
         <div className="mb-20 md:text-center flex flex-col items-center">
@@ -24,93 +71,40 @@ export default function Reviews() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-x-8 gap-y-8">
-
-          {/* Review 1 */}
-          <div
-            className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative flex flex-col h-full hover:shadow-md transition-shadow duration-300"
-            style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#1a73e8] text-white flex items-center justify-center text-base font-medium">M</div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">Marieke V.</p>
-                  <p className="text-xs text-gray-500 mt-0.5">2 reviews</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reviews.map((r) => (
+            <article
+              key={r.name}
+              className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative flex flex-col h-full hover:shadow-md transition-shadow duration-300"
+              style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
+            >
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    aria-hidden="true"
+                    className="w-10 h-10 shrink-0 rounded-full text-white flex items-center justify-center text-base font-medium"
+                    style={{ backgroundColor: r.bg }}
+                  >
+                    {r.initial}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">{r.name}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{r.meta}</p>
+                  </div>
                 </div>
+                <iconify-icon icon="logos:google-icon" className="text-xl mt-1" aria-label="Google" />
               </div>
-              <iconify-icon icon="logos:google-icon" className="text-xl mt-1" />
-            </div>
-            <div className="flex items-center gap-0.5 mb-3">
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <span className="text-xs text-gray-500 ml-2">3 maanden geleden</span>
-            </div>
-            <p className="text-sm text-gray-700 leading-relaxed flex-grow">
-              Na maanden rondlopen met aanhoudende stress en spanningshoofdpijn, bracht Sam direct verlichting. Zijn rustige, observerende aanpak wekt direct vertrouwen. Een verademing in een gejaagde wereld.
-            </p>
-          </div>
-
-          {/* Review 2 */}
-          <div
-            className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative flex flex-col h-full hover:shadow-md transition-shadow duration-300"
-            style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#34a853] text-white flex items-center justify-center text-base font-medium">J</div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">Koen L.</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Google Review</p>
-                </div>
+              <div className="flex items-center gap-0.5 mb-3" aria-label="5 van 5 sterren">
+                <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
+                <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
+                <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
+                <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
+                <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
+                <span className="text-xs text-gray-500 ml-2">{r.timeAgo}</span>
               </div>
-              <iconify-icon icon="logos:google-icon" className="text-xl mt-1" />
-            </div>
-            <div className="flex items-center gap-0.5 mb-3">
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <span className="text-xs text-gray-500 ml-2">Een maand geleden</span>
-            </div>
-            <p className="text-sm text-gray-700 leading-relaxed flex-grow">
-              In de voorbereiding op mijn eerste marathon kwam een oude enkelblessure meer opspelen.
-              Drie behandeling ben ik ondergaan in drie weken en het had meteen al een enorm merkbaar effect na de eerste behandeling. Ik kon probleemloos verder gaan trainen voor de marathon en deze heb ik uiteindelijk met plezier en zonder pijn uitgelopen.
-            </p>
-          </div>
-
-          {/* Review 3 */}
-          <div
-            className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative flex flex-col h-full hover:shadow-md transition-shadow duration-300"
-            style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#ea4335] text-white flex items-center justify-center text-base font-medium">L</div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">Lisa K.</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Lokaal gids · 12 reviews</p>
-                </div>
-              </div>
-              <iconify-icon icon="logos:google-icon" className="text-xl mt-1" />
-            </div>
-            <div className="flex items-center gap-0.5 mb-3">
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <iconify-icon icon="ic:round-star" className="text-[#fbbc04] text-base" />
-              <span className="text-xs text-gray-500 ml-2">5 maanden geleden</span>
-            </div>
-            <p className="text-sm text-gray-700 leading-relaxed flex-grow">
-              Wat een fijne, veilige plek. Sam luistert écht naar de signalen van je lichaam in plaats van alleen symptomen te bestrijden. Mijn overgangsklachten zijn aanzienlijk afgenomen.
-            </p>
-          </div>
-
+              <p className="text-sm text-gray-700 leading-relaxed flex-grow">{r.text}</p>
+            </article>
+          ))}
         </div>
 
         <div className="flex flex-col text-center mt-20 items-center">
@@ -119,10 +113,10 @@ export default function Reviews() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <a
-              href="#ervaringen"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 hover:bg-[#4A6559] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 sm:w-auto text-sm font-medium text-[#FAF8F3] bg-[#1F3A36] w-full rounded-sm pt-3.5 pr-8 pb-3.5 pl-8"
             >
-              Lees alle ervaringen
+              Plan een afspraak
             </a>
             <a
               href="#faq"

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
+import BookingWidget from "@/components/BookingWidget";
+import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/behandelingen/acupunctuur-concentratieproblemen" },
   title: "Acupunctuur bij Concentratieproblemen | Acupunctuur Zaandam",
   description:
     "Acupunctuur bij concentratieproblemen in Zaandam. Verbeter uw focus, helderheid en mentale uithouding op een natuurlijke en erkende manier.",
@@ -337,25 +339,7 @@ export default function ConcentratieproblemenPage() {
         </section>
 
         {/* Trust Bar */}
-        <section aria-label="Beroepsverenigingen en verzekeraars" className="border-y bg-[#FAF8F3] border-[#1F3A36]/10 py-16">
-          <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <h2 className="uppercase text-xs font-semibold text-[#1F3A36]/50 tracking-widest text-center mb-10" style={{ fontFamily: "Inter, sans-serif" }}>
-              Erkend door verenigingen en vergoed door verzekeraars
-            </h2>
-            <div className="flex flex-wrap gap-10 md:gap-16 transition-all duration-300 mix-blend-multiply w-full justify-center items-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e20f36d5-fa43-45b0-80bb-6be75fbddc32_800w.webp" alt="NVA Erkend Acupuncturist" className="md:h-12 w-auto h-10 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/31e0e290-0757-46ba-a865-f2b818683b9d_320w.png" alt="VGZ Vergoeding Acupunctuur" className="md:h-10 w-auto h-8 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a2e5dfdb-34c2-4807-8f43-9cce38479a8d_800w.jpg" alt="TCMA Certificering" className="md:h-12 w-auto h-10 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 w-auto h-8 object-contain" />
-            </div>
-          </div>
-        </section>
+        <TrustBadges />
 
         {/* CTA */}
         <section id="contact" aria-labelledby="cta-concentratie-titel" className="overflow-hidden bg-[#1F3A36] pt-32 pb-32 relative">
@@ -377,19 +361,12 @@ export default function ConcentratieproblemenPage() {
                 </a>
               </div>
               <div className="bg-white/5 rounded-xl overflow-hidden border border-white/10">
-                <iframe
-                  id="D8uouGkFZH4Alr37y5z4_behandeling_concentratieproblemen"
-                  src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
-                  style={{ width: "100%", height: "490px", border: "none" }}
-                  loading="lazy"
-                  title="Afspraak maken voor concentratieproblemen behandeling"
-                />
+                <BookingWidget id="behandeling_concentratieproblemen" />
               </div>
             </div>
           </div>
         </section>
       </main>
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
-    </>
+</>
   );
 }

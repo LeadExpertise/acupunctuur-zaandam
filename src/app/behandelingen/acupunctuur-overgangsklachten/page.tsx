@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
+import BookingWidget from "@/components/BookingWidget";
+import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/behandelingen/acupunctuur-overgangsklachten" },
   title: "Acupunctuur bij Overgangsklachten | Acupunctuur Zaandam",
   description: "Last van opvliegers, nachtelijk zweten of stemmingswisselingen door de overgang? Acupunctuur Zaandam biedt natuurlijke verlichting. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur overgangsklachten", "acupunctuur menopauze Zaandam", "acupunctuur opvliegers", "acupunctuur climacterium", "natuurlijke behandeling overgang"],
@@ -331,25 +333,7 @@ export default function OvergangsklachtenPage() {
         </section>
 
         {/* Trust Bar */}
-        <section aria-label="Beroepsverenigingen en verzekeraars" className="border-b bg-[#FAF8F3] border-[#1F3A36]/10 py-16">
-          <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <h2 className="uppercase text-xs font-semibold text-[#1F3A36]/50 tracking-widest text-center mb-10" style={{ fontFamily: "Inter, sans-serif" }}>
-              Erkend door verenigingen en vergoed door verzekeraars
-            </h2>
-            <div className="flex flex-wrap gap-10 md:gap-16 transition-all duration-300 mix-blend-multiply w-full justify-center items-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e20f36d5-fa43-45b0-80bb-6be75fbddc32_800w.webp" alt="NVA Erkend Acupuncturist" className="md:h-12 w-auto h-10 object-cover bg-center" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/31e0e290-0757-46ba-a865-f2b818683b9d_320w.png" alt="VGZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a2e5dfdb-34c2-4807-8f43-9cce38479a8d_800w.jpg" alt="TCMA Certificering" className="md:h-12 w-auto h-10 object-contain" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96bebee7-85f9-48b8-b204-1c39cdbc2b0f_320w.png" alt="Zilveren Kruis Vergoeding" className="md:h-12 w-auto h-10 object-cover bg-center" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/666c0a54-7103-40a7-a6c5-b75d8c8ff1a6_320w.png" alt="CZ Vergoeding Acupunctuur" className="md:h-10 bg-center w-auto h-8 object-cover" />
-            </div>
-          </div>
-        </section>
+        <TrustBadges />
 
         {/* CTA */}
         <section id="contact" aria-labelledby="cta-titel" className="overflow-hidden text-center bg-[#1F3A36] pt-32 pb-32 relative">
@@ -373,37 +357,7 @@ export default function OvergangsklachtenPage() {
                   </a>
                 </div>
               </div>
-              <div className="w-full relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#8A6B3D]/30 to-[#4A6559]/30 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-300" />
-                <div className="relative w-full bg-[#FAF8F3] rounded-xl shadow-2xl border border-[#1F3A36]/10 overflow-hidden flex flex-col">
-                  <div className="flex shrink-0 bg-[#F2EDE3] h-10 border-[#1F3A36]/5 border-b pr-4 pl-4 items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#1F3A36]/20" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#1F3A36]/20" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#1F3A36]/20" />
-                    </div>
-                    <span className="text-[10px] font-semibold tracking-widest uppercase text-[#1F3A36]/40">Online Planner</span>
-                    <div className="w-10" />
-                  </div>
-                  <div className="w-full bg-[#FAF8F3] min-h-[600px] flex-grow relative">
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <svg className="animate-spin h-8 w-8 text-[#4A6559]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                      </svg>
-                    </div>
-                    <iframe
-                      src="https://api.leadconnectorhq.com/widget/booking/D8uouGkFZH4Alr37y5z4"
-                      style={{ width: "100%", border: "none", overflow: "auto", minHeight: "650px", height: "100%", position: "relative", zIndex: 10 }}
-                      scrolling="yes"
-                      id="D8uouGkFZH4Alr37y5z4_behandeling_overgangsklachten"
-                      title="Maak een afspraak"
-                      loading="lazy"
-                    />
-                    <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
-                  </div>
-                </div>
-              </div>
+              <BookingWidget id="behandeling_overgangsklachten" />
             </div>
           </div>
         </section>

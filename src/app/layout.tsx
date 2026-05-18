@@ -1,5 +1,5 @@
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
@@ -21,6 +21,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = defaultMetadata;
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAF8F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#1F3A36" },
+  ],
+};
 
 export default function RootLayout({
   children,
@@ -153,12 +160,87 @@ gtag('config', 'G-QVP2D9QN30');`,
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "3",
+                reviewCount: "5",
                 bestRating: "5",
                 worstRating: "1",
               },
+              review: [
+                {
+                  "@type": "Review",
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                  author: { "@type": "Person", name: "Koen Lindeman" },
+                  reviewBody:
+                    "In de voorbereiding op mijn eerste marathon kwam een oude enkelblessure opspelen. Drie behandelingen in drie weken en het had meteen al een enorm merkbaar effect. Ik kon probleemloos doortrainen en heb de marathon zonder pijn uitgelopen. Een aanrader!",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                  author: { "@type": "Person", name: "Irene de Vries" },
+                  reviewBody:
+                    "Prima behandeld. Ik ben belast met een chronische kwaal en ben met een behandeling per drie weken goed geholpen.",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                  author: { "@type": "Person", name: "Guntug Yardimci" },
+                  reviewBody:
+                    "Ik had nooit eerder acupunctuur geprobeerd, totdat ik bij Sam terechtkwam met vermoeidheidsklachten en stress. Sam luistert heel goed alvorens hij een behandeling toepast. Door hem ben ik heel snel opgeknapt.",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                  author: { "@type": "Person", name: "Jasper Nederhoff" },
+                  reviewBody:
+                    "Fijne ervaring, open gesprekken, veilige setting en een resultaat meer dan ik had verwacht. Heel erg blij met Sam, zijn werk en passie.",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                  author: { "@type": "Person", name: "Olga Steffhaan" },
+                  reviewBody:
+                    "Ik kwam vorige week heel slecht lopend en met veel pijn bij Sam binnen. Na de behandeling stond ik op van de behandeltafel en kon ik tot mijn grote verbazing rechtop en met redelijk weinig pijn lopen.",
+                },
+              ],
               hasMap:
                 "https://www.google.com/maps/place/Lagendijk+3,+1541+KA+Koog+aan+de+Zaan",
+            }),
+          }}
+        />
+
+        {/* WebSite schema with SearchAction — enables sitelinks search box */}
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://www.acupunctuurzaandam.nl/#website",
+              url: "https://www.acupunctuurzaandam.nl",
+              name: "Acupunctuur Zaandam",
+              inLanguage: "nl-NL",
+              publisher: { "@id": "https://www.acupunctuurzaandam.nl/#practice" },
             }),
           }}
         />
