@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata("https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan", {
   title: "Acupunctuur Koog aan de Zaan — NVA Erkend",
   description:
     "Acupunctuurpraktijk aan de Lagendijk in Koog aan de Zaan. Sam de Vries behandelt hooikoorts, nekpijn, vermoeidheid en migraine. NVA-erkend, vergoed door zorgverzekeraars.",
@@ -15,16 +16,13 @@ export const metadata: Metadata = {
     "acupunctuur overgang koog aan de zaan",
     "chinese geneeskunde zaanstreek",
   ],
-  alternates: {
-    canonical: "https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan",
-  },
   openGraph: {
     title: "Acupunctuur Koog aan de Zaan — Sam de Vries",
     description:
       "NVA-erkende acupunctuurpraktijk aan de Lagendijk in Koog aan de Zaan. Behandelingen bij hooikoorts, nekpijn en meer.",
     url: "https://www.acupunctuurzaandam.nl/acupunctuur-koog-aan-de-zaan",
   },
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-burn-out" },
-  title: "Acupunctuur bij Burn-out | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-burn-out", {
+  title: "Acupunctuur bij Burn-out",
   description:
     "Acupunctuur bij burn-out in Zaandam. Ondersteun uw herstelproces, herstel energie en veerkracht en verlicht klachten als uitputting, angst en slaapproblemen.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "burn-out aanvulling behandeling",
     "acupunctuur stress mentaal Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

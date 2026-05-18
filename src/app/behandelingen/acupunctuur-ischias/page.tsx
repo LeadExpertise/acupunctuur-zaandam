@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-ischias" },
-  title: "Acupunctuur bij Ischias | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-ischias", {
+  title: "Acupunctuur bij Ischias",
   description: "Last van ischias, uitstralende beenpijn of het piriformissyndroom? Acupunctuur Zaandam behandelt ischias effectief en natuurlijk. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur ischias", "acupunctuur ischias Zaandam", "behandeling ischias acupunctuur", "acupunctuur ischias klachten", "natuurlijke behandeling ischias"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/ischias" },
+export const metadata: Metadata = pageMetadata("/klachten/ischias", {
   title: "Acupunctuur bij Ischias Zaandam | Ischiaszenuw & Uitstralende Pijn",
   description:
     "Ischias: uitstralende pijn vanuit de rug door het been? Acupunctuur in Zaandam verlicht druk op de ischiaszenuw. Erkend behandelaar, deels vergoed.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "ischias oefeningen",
     "hernia acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

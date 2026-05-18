@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-vermoeidheid" },
-  title: "Acupunctuur bij Vermoeidheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-vermoeidheid", {
+  title: "Acupunctuur bij Vermoeidheid",
   description: "Last van aanhoudende vermoeidheid en weinig energie? Acupunctuur Zaandam behandelt vermoeidheid op een natuurlijke manier. Erkend acupuncturist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur vermoeidheid", "acupunctuur vermoeidheid Zaandam", "behandeling vermoeidheid acupunctuur", "acupunctuur energie", "natuurlijke behandeling vermoeidheid Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

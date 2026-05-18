@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-blaasontstekingen" },
-  title: "Acupunctuur bij Blaasontstekingen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-blaasontstekingen", {
+  title: "Acupunctuur bij Blaasontstekingen",
   description: "Last van terugkerende blaasontstekingen? Acupunctuur versterkt uw weerstand en vermindert de kans op nieuwe infecties. Erkend & vergoed bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur blaasontstekingen", "acupunctuur blaasontstekingen Zaandam", "behandeling blaasontstekingen", "acupunctuur blaasontstekingen klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -8,14 +8,13 @@ export const siteConfig = {
   locale: "nl_NL",
 };
 
-const OG_IMAGE =
-  "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png";
-
 /**
  * Root metadata for layout.tsx — page-level metadata is added in each page.tsx.
- * Canonical + openGraph.url are intentionally NOT set here; every page sets its
- * own via `pageMetadata()` so Google does not deduplicate all routes against
- * the homepage URL.
+ * - `alternates.canonical` is set per page via `pageMetadata()` so Google does
+ *   not deduplicate every route against the homepage URL.
+ * - `openGraph.images` and Twitter image are intentionally NOT set here; Next.js
+ *   auto-discovers `src/app/opengraph-image.tsx` (1200×630) as the site-wide
+ *   fallback and `src/app/blog/[slug]/opengraph-image.tsx` for per-post images.
  */
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -34,20 +33,19 @@ export const defaultMetadata: Metadata = {
     "burnout",
   ],
   authors: [{ name: siteConfig.name }],
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        { url: "/feed.xml", title: "Acupunctuur Zaandam — Blog" },
+      ],
+    },
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 320,
-        height: 64,
-        alt: "Acupunctuur Zaandam — Sam de Vries",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,23 +64,42 @@ export const defaultMetadata: Metadata = {
 };
 
 /**
- * Helper to build per-page metadata with a guaranteed canonical + openGraph URL.
- * Pass the absolute path (e.g. "/klachten/nekklachten"). metadataBase resolves
- * it to the full URL automatically.
+ * Helper to build per-page metadata with a guaranteed canonical, openGraph URL,
+ * and page-specific openGraph title/description. Pass the absolute path
+ * (e.g. "/klachten/nekklachten"). metadataBase resolves it to the full URL.
+ *
+ * Auto-spreads `title` and `description` into `openGraph.{title,description}`
+ * if you didn't set them explicitly — fixes the issue where every subpage
+ * fell back to the homepage values when shared on social.
  */
 export function pageMetadata(
   path: string,
   overrides: Metadata = {}
 ): Metadata {
-  const { openGraph, alternates, ...rest } = overrides;
+  const { openGraph, alternates, title, description, ...rest } = overrides;
+
+  // Pull plain-string title (string or {default} variant) for OG fallback
+  const ogTitleFallback =
+    typeof title === "string"
+      ? title
+      : title && typeof title === "object" && "default" in title
+        ? (title as { default: string }).default
+        : undefined;
+
   return {
     ...rest,
+    title,
+    description,
     alternates: {
       canonical: path,
+      languages: { "nl-NL": path },
       ...alternates,
     },
     openGraph: {
       url: path,
+      title: ogTitleFallback,
+      description: description as string | undefined,
+      locale: "nl_NL",
       ...openGraph,
     },
   };

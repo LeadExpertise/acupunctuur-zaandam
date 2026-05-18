@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/chronische-ontstekingsklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/chronische-ontstekingsklachten", {
   title: "Acupunctuur bij Chronische Ontstekingsklachten Zaandam",
   description: "Last van chronische ontstekingen, gewrichtsontsteking of laaggradige systemische ontsteking? Acupunctuur ondersteunt het reguleren van het immuunsysteem. Praktijk in Zaandam.",
   keywords: ["chronische ontsteking", "laaggradige ontsteking", "acupunctuur ontsteking", "reumatoïde artritis", "inflammatie", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

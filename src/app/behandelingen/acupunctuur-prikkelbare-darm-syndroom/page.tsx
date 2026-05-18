@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-prikkelbare-darm-syndroom" },
-  title: "Acupunctuur bij Prikkelbare Darm Syndroom | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-prikkelbare-darm-syndroom", {
+  title: "Acupunctuur bij Prikkelbare Darm Syndroom",
   description:
     "Last van PDS? Acupunctuur in Zaandam verlicht buikpijn, diarree, obstipatie en opgeblazen gevoel bij prikkelbare darm syndroom. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "prikkelbare darm behandeling",
     "acupunctuur darmklachten",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

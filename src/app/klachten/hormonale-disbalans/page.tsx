@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/hormonale-disbalans" },
+export const metadata: Metadata = pageMetadata("/klachten/hormonale-disbalans", {
   title: "Acupunctuur bij Hormonale Disbalans Zaandam",
   description:
     "Acupunctuur voor hormoonbalans in Zaandam. Ondersteuning bij oestrogeendominantie, laag progesteron, schildklierproblemen, stemmingswisselingen en onverklaard gewichtsverlies.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "stemmingswisselingen hormonen acupunctuur",
     "hormonale klachten TCG zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

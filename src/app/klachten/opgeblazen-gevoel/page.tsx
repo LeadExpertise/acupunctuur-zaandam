@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/opgeblazen-gevoel" },
+export const metadata: Metadata = pageMetadata("/klachten/opgeblazen-gevoel", {
   title: "Acupunctuur bij Opgeblazen Gevoel Zaandam | Winderigheid",
   description:
     "Last van een opgeblazen buik, winderigheid of een gevoel van distensie? Acupunctuur in Zaandam behandelt de onderliggende oorzaak van functioneel opgeblazen gevoel.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "gasvorming acupunctuur zaandam",
     "functioneel opgeblazen gevoel behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

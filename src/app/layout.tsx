@@ -7,17 +7,27 @@ import { defaultMetadata } from "@/lib/metadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
+// Cormorant Garamond is the LCP-critical font (H1 + H2 on every page).
+// Only loading `400 normal` keeps the request to a single font file; italic
+// is rarely used and the browser will synthesize it acceptably.
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
+  weight: ["400"],
+  style: ["normal"],
+  display: "swap",
+  preload: true,
 });
 
+// Inter is the body font. 400 (normal) + 500 (medium) covers >85% of usages;
+// font-light (300) on body copy is hard to read on mobile anyway, so we drop it
+// and let the browser fall back to 400 for class="font-light" elements.
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = defaultMetadata;
@@ -36,6 +46,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
+      <head>
+        {/* Preconnect to third-party origins used by GTM, analytics, icons,
+            booking widget, and image CDNs. Saves DNS+TLS handshake time
+            (~150–300ms each on mobile) when these resources are actually
+            requested later in the page lifecycle. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://hoirqrkdgbmvpwutwuwj.supabase.co" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://code.iconify.design" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
+        <link rel="dns-prefetch" href="https://dashboard.searchatlas.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+      </head>
       <body
         className={`${cormorantGaramond.variable} ${inter.variable} antialiased selection:bg-[#F2EDE3] selection:text-[#1F3A36] text-[#1F3A36] bg-[#FAF8F3]`}
       >
@@ -78,25 +101,28 @@ gtag('config', 'G-QVP2D9QN30');`,
           }}
         />
 
+        {/* Iconify web component — decorative, loaded after page is idle */}
         <Script
           src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-<Script
-  id="sa-dynamic-optimization"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `(function(){
-      var script = document.createElement("script");
-      script.setAttribute("nowprocket","");
-      script.setAttribute("nitro-exclude","");
-      script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
-      script.dataset.uuid = "22688c06-d420-48c8-9d36-a043272702e6";
-      script.id = "sa-dynamic-optimization-loader";
-      document.head.appendChild(script);
-    })();`,
-  }}
-/>
+
+        {/* SearchAtlas dynamic optimization — non-critical, runs in idle time */}
+        <Script
+          id="sa-dynamic-optimization"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+              var script = document.createElement("script");
+              script.setAttribute("nowprocket","");
+              script.setAttribute("nitro-exclude","");
+              script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+              script.dataset.uuid = "22688c06-d420-48c8-9d36-a043272702e6";
+              script.id = "sa-dynamic-optimization-loader";
+              document.head.appendChild(script);
+            })();`,
+          }}
+        />
         {/* LocalBusiness / MedicalBusiness structured data */}
         <Script
           id="schema-local-business"
@@ -115,7 +141,35 @@ gtag('config', 'G-QVP2D9QN30');`,
               logo: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
               image:
                 "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68f83157-af01-4d10-a1e0-6bb35e6e923d_320w.png",
-              priceRange: "€€",
+              priceRange: "€60 - €80",
+              paymentAccepted: ["Cash", "Bank Transfer", "Invoice"],
+              currenciesAccepted: "EUR",
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Acupunctuurbehandelingen",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "MedicalTherapy",
+                      name: "Intakeconsult acupunctuur (1,5 uur)",
+                    },
+                    price: "80",
+                    priceCurrency: "EUR",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "MedicalTherapy",
+                      name: "Vervolgbehandeling acupunctuur (1 uur)",
+                    },
+                    price: "60",
+                    priceCurrency: "EUR",
+                  },
+                ],
+              },
+              founder: { "@id": "https://www.acupunctuurzaandam.nl/#sam-de-vries" },
+              employee: { "@id": "https://www.acupunctuurzaandam.nl/#sam-de-vries" },
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Lagendijk 3",

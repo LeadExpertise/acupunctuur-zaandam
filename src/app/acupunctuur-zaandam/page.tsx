@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata("https://www.acupunctuurzaandam.nl/acupunctuur-zaandam", {
   title: "Acupunctuur Zaandam — Sam de Vries, NVA Erkend",
   description:
     "Acupunctuurpraktijk in Zaandam van Sam de Vries. NVA-erkend, behandelingen bij pijn, stress, burnout en vrouwenklachten. Vergoed door zorgverzekeraars.",
@@ -16,16 +17,13 @@ export const metadata: Metadata = {
     "burnout acupunctuur zaandam",
     "nva acupunctuur zaandam",
   ],
-  alternates: {
-    canonical: "https://www.acupunctuurzaandam.nl/acupunctuur-zaandam",
-  },
   openGraph: {
     title: "Acupunctuur Zaandam — Praktijk Sam de Vries",
     description:
       "NVA-erkende acupunctuurpraktijk in Zaandam. Behandelingen bij pijn, stress, burnout en meer.",
     url: "https://www.acupunctuurzaandam.nl/acupunctuur-zaandam",
   },
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

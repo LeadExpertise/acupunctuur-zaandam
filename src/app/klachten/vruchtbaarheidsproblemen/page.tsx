@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/vruchtbaarheidsproblemen" },
+export const metadata: Metadata = pageMetadata("/klachten/vruchtbaarheidsproblemen", {
   title: "Acupunctuur bij Vruchtbaarheidsproblemen Zaandam | Fertiliteit",
   description:
     "Acupunctuur als aanvullende ondersteuning bij vruchtbaarheidsproblemen in Zaandam. Voor vrouwen en mannen die zwanger willen worden, inclusief hormonale en onverklaarde infertiliteit.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "sperma kwaliteit acupunctuur",
     "acupunctuur zwangerschap ondersteuning zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

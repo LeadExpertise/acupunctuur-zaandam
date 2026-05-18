@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-stressklachten" },
-  title: "Acupunctuur bij Stressklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-stressklachten", {
+  title: "Acupunctuur bij Stressklachten",
   description:
     "Acupunctuur bij stressklachten in Zaandam. Verminder spanning, herstel de balans en leer uw lichaam weer te ontspannen op een natuurlijke, erkende manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "lichamelijke stressklachten acupunctuur",
     "acupunctuur stress mentaal Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

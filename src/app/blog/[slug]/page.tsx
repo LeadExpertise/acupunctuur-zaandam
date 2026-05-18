@@ -58,26 +58,58 @@ export default async function BlogPostPage({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.metaDescription,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      "@type": "Person",
-      name: "Sam de Vries",
-      url: "https://www.acupunctuurzaandam.nl/over-de-praktijk",
-    },
-    publisher: {
-      "@type": "MedicalClinic",
-      name: "Acupunctuur Zaandam",
-      url: "https://www.acupunctuurzaandam.nl",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.acupunctuurzaandam.nl/blog/${post.slug}`,
-    },
-    keywords: post.tags.join(", "),
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: post.title,
+        description: post.metaDescription,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+          "@type": "Person",
+          "@id": "https://www.acupunctuurzaandam.nl/#sam-de-vries",
+          name: "Sam de Vries",
+          jobTitle: "Acupuncturist",
+          url: "https://www.acupunctuurzaandam.nl/over-de-praktijk",
+        },
+        publisher: {
+          "@type": "MedicalClinic",
+          "@id": "https://www.acupunctuurzaandam.nl/#practice",
+          name: "Acupunctuur Zaandam",
+          url: "https://www.acupunctuurzaandam.nl",
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://www.acupunctuurzaandam.nl/blog/${post.slug}`,
+        },
+        keywords: post.tags.join(", "),
+        articleSection: post.category,
+        inLanguage: "nl-NL",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.acupunctuurzaandam.nl",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://www.acupunctuurzaandam.nl/blog",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: `https://www.acupunctuurzaandam.nl/blog/${post.slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

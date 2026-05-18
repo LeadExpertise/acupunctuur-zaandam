@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/vermoeidheid" },
+export const metadata: Metadata = pageMetadata("/klachten/vermoeidheid", {
   title: "Acupunctuur bij Vermoeidheid Zaandam | Energie Terugwinnen",
   description:
     "Last van aanhoudende vermoeidheid en laag energieniveau? Acupunctuur in Zaandam ondersteunt herstel van energie door het zenuwstelsel te reguleren en de levenskracht te versterken.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "energie terugwinnen acupunctuur",
     "vermoeidheid TCG zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/duizeligheid" },
+export const metadata: Metadata = pageMetadata("/klachten/duizeligheid", {
   title: "Acupunctuur bij Duizeligheid Zaandam | Vertigo & Evenwichtsproblemen",
   description:
     "Last van duizeligheid, vertigo of evenwichtsproblemen? Acupunctuur in Zaandam biedt een holistische aanpak voor BPPV, de ziekte van Menière en cervicogene duizeligheid.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "ziekte van menière acupunctuur",
     "cervicogene duizeligheid acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

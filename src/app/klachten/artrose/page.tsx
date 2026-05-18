@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/artrose" },
+export const metadata: Metadata = pageMetadata("/klachten/artrose", {
   title: "Acupunctuur bij Artrose Zaandam | Gewrichtsslijtage & Pijnverlichting",
   description:
     "Artrose en gewrichtspijn? Acupunctuur in Zaandam vermindert pijn, verbetert beweeglijkheid en vertraagt slijtage. Erkend NVA-acupuncturist, vergoed door verzekering.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "heuprtrose acupunctuur",
     "artrose behandeling zonder operatie",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

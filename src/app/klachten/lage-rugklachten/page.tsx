@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/lage-rugklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/lage-rugklachten", {
   title: "Acupunctuur bij Lage Rugklachten Zaandam | Spit & Hernia",
   description:
     "Natuurlijke behandeling voor lage rugklachten, spit en hernia in Zaandam. Acupunctuur vermindert pijn en stijfheid. Plan direct een effectieve behandeling.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "behandeling lage rugpijn acupunctuur",
     "natuurlijke behandeling lage rugpijn",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

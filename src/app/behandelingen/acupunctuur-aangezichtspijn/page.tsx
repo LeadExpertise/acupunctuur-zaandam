@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-aangezichtspijn" },
-  title: "Acupunctuur bij Aangezichtspijn | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-aangezichtspijn", {
+  title: "Acupunctuur bij Aangezichtspijn",
   description:
     "Acupunctuur bij aangezichtspijn in Zaandam. Verlicht pijn in het gezicht veroorzaakt door zenuwprikkeling, sinusitis of spierspanning op een natuurlijke manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "aangezichtspijn natuurlijke behandeling",
     "acupunctuur hoofd zenuwstelsel Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

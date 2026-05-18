@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/spierpijn" },
+export const metadata: Metadata = pageMetadata("/klachten/spierpijn", {
   title: "Acupunctuur bij Spierpijn Zaandam | Myalgie & Triggerpoints",
   description:
     "Chronische spierpijn, myalgie of gespannen spieren? Acupunctuur in Zaandam behandelt triggerpoints en verlicht spierpijn effectief. Erkend NVA-acupuncturist.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "droge naaldtherapie",
     "chronische spierpijn zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

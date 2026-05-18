@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/verkoudheid" },
+export const metadata: Metadata = pageMetadata("/klachten/verkoudheid", {
   title: "Acupunctuur bij Chronische Verkoudheid Zaandam | Weerstand Opbouwen",
   description:
     "Steeds terugkerende verkoudheden of een laag weerstandsniveau? Acupunctuur in Zaandam versterkt de afweer-Qi, ondersteunt het immuunsysteem en bouwt weerstand op.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "terugkerende infecties acupunctuur zaandam",
     "afweer versterken acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

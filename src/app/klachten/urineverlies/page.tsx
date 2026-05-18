@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/urineverlies" },
+export const metadata: Metadata = pageMetadata("/klachten/urineverlies", {
   title: "Acupunctuur bij Urineverlies Zaandam | Incontinentie",
   description: "Last van urineverlies of incontinentie? Acupunctuur ondersteunt de bekkenbodem en het zenuwstelsel bij stressincontinentie, aandrangincontinentie en gemengde incontinentie. Praktijk in Zaandam.",
   keywords: ["urineverlies", "incontinentie", "stressincontinentie", "acupunctuur incontinentie", "bekkenbodem", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

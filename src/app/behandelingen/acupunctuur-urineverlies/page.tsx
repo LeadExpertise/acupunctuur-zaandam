@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-urineverlies" },
-  title: "Acupunctuur bij Urineverlies | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-urineverlies", {
+  title: "Acupunctuur bij Urineverlies",
   description:
     "Last van urineverlies of incontinentie? Acupunctuur in Zaandam helpt bij stress-incontinentie, urgency-incontinentie en bekkenbodemklachten. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "postpartum urineverlies acupunctuur",
     "acupunctuur blaasklachten",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

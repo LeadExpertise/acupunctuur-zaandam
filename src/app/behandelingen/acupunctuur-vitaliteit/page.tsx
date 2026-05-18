@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-vitaliteit" },
-  title: "Acupunctuur voor Vitaliteit | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-vitaliteit", {
+  title: "Acupunctuur voor Vitaliteit",
   description: "Voel u weer energiek en levendig. Acupunctuur Zaandam ondersteunt uw vitaliteit, verbetert de Qi-circulatie, stimuleert het immuunsysteem en herstelt uw mentale en fysieke energie. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur vitaliteit", "acupunctuur vitaliteit Zaandam", "acupunctuur energie verbeteren", "acupunctuur preventief", "acupunctuur weerstand verhogen Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

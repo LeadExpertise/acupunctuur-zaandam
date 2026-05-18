@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/obstipatie" },
+export const metadata: Metadata = pageMetadata("/klachten/obstipatie", {
   title: "Acupunctuur bij Obstipatie Zaandam | Constipatie Behandelen",
   description:
     "Chronische obstipatie of constipatie behandelen met acupunctuur in Zaandam. Stimuleer de darmmotiliteit en herstel de stoelgang op een natuurlijke manier.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "stoelgang normaliseren acupunctuur",
     "acupunctuur spastische obstipatie",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

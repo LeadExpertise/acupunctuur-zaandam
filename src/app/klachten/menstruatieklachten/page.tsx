@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/menstruatieklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/menstruatieklachten", {
   title: "Acupunctuur bij Menstruatieklachten & PMS Zaandam",
   description:
     "Verlichting van menstruatiepijn, krampen en PMS met acupunctuur in Zaandam. Ondersteund door wetenschappelijk onderzoek. Herstel uw cyclus op een natuurlijke manier.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "krampen menstruatie acupunctuur",
     "acupunctuur cyclus reguleren zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

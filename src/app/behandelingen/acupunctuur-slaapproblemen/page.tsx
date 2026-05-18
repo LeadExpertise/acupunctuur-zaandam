@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-slaapproblemen" },
-  title: "Acupunctuur bij Slaapproblemen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-slaapproblemen", {
+  title: "Acupunctuur bij Slaapproblemen",
   description:
     "Acupunctuur bij slaapproblemen in Zaandam. Verbeter uw slaapkwaliteit, pak de oorzaak aan en herstel uw nachtrust op een natuurlijke, effectieve manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "doorslapen problemen acupunctuur",
     "acupunctuur slaap Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

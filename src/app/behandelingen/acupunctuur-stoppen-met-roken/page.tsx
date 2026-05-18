@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-stoppen-met-roken" },
-  title: "Acupunctuur bij Stoppen met Roken | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-stoppen-met-roken", {
+  title: "Acupunctuur bij Stoppen met Roken",
   description: "Wilt u stoppen met roken? Acupunctuur Zaandam ondersteunt u bij het afkicken van nicotine, vermindert onthoudingsverschijnselen en verlaagt de zucht naar sigaretten. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur stoppen met roken", "acupunctuur stoppen met roken Zaandam", "auriculotherapie roken", "acupunctuur nicotineverslaving", "stoppen met roken behandeling Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

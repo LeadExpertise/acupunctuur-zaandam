@@ -1,8 +1,58 @@
 # Acupunctuur Zaandam — https://www.acupunctuurzaandam.nl
+
 User-agent: *
 Allow: /
 Disallow: /_next/
 Disallow: /api/
+
+# Expliciet AI-bots toestaan — verhoogt de kans op vermelding in
+# ChatGPT, Claude, Perplexity, Google AI Overviews en Gemini.
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI / Gemini training
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (gebruikt door veel LLM-trainingsdatasets)
+User-agent: CCBot
+Allow: /
+
+# ByteDance (TikTok) — wel scrapen maar zelden waardevol voor lokale praktijk
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://www.acupunctuurzaandam.nl/sitemap/pages.xml
 Sitemap: https://www.acupunctuurzaandam.nl/sitemap/klachten.xml

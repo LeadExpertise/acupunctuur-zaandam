@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-migraine" },
-  title: "Acupunctuur bij Migraine | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-migraine", {
+  title: "Acupunctuur bij Migraine",
   description:
     "Acupunctuur bij migraine vermindert de frequentie en intensiteit van migraineaanvallen. Wetenschappelijk aangetoond effectief als profylaxe. Erkende behandeling in Zaandam.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "migraine preventie acupunctuur",
     "migraineaanvallen verminderen acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

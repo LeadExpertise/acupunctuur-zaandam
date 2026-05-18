@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/tarieven-vergoeding" },
-  title: "Tarieven & Vergoeding Acupunctuur 2026 | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/tarieven-vergoeding", {
+  title: "Tarieven & Vergoeding Acupunctuur 2026",
   description:
     "Bekijk de tarieven voor acupunctuur in Zaandam. Intake €80, vervolgbehandeling €60. Vaak (deels) vergoed via uw aanvullende zorgverzekering. Geen eigen risico.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur tarieven 2026",
     "zorgverzekering acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-zwangerschapsklachten" },
-  title: "Acupunctuur bij Zwangerschapsklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-zwangerschapsklachten", {
+  title: "Acupunctuur bij Zwangerschapsklachten",
   description:
     "Last van zwangerschapsmisselijkheid, bekken- of rugpijn tijdens zwangerschap? Acupunctuur in Zaandam verlicht zwangerschapsklachten veilig en effectief. Erkend NVA-acupuncturist.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "ochtendmisselijkheid acupunctuur",
     "vermoeidheid zwangerschap acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

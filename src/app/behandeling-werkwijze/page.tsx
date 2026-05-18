@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandeling-werkwijze" },
+export const metadata: Metadata = pageMetadata("/behandeling-werkwijze", {
   title: "Acupunctuur Behandeling Zaandam | Intake & Werkwijze | Sam de Vries",
   description:
     "Ontdek hoe een acupunctuur behandeling werkt bij Acupunctuur Zaandam. Lees over de intake, kosten, het verloop van een sessie en plan direct uw afspraak.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur kosten",
     "acupunctuur sessie verloop",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

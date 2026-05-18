@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-lage-rugklachten" },
-  title: "Acupunctuur bij Lage Rugklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-lage-rugklachten", {
+  title: "Acupunctuur bij Lage Rugklachten",
   description: "Last van lage rugpijn, spit of een hernia? Acupunctuur Zaandam biedt effectieve, natuurlijke behandeling voor lage rugklachten. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur lage rugklachten", "acupunctuur lage rugklachten Zaandam", "behandeling lage rugpijn acupunctuur", "acupunctuur rugpijn klachten", "natuurlijke behandeling lage rugpijn"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

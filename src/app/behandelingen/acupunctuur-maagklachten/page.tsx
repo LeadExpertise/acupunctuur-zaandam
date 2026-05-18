@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-maagklachten" },
-  title: "Acupunctuur bij Maagklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-maagklachten", {
+  title: "Acupunctuur bij Maagklachten",
   description: "Last van chronische maagpijn, misselijkheid, maagzuur of functionele dyspepsie? Ontdek hoe acupunctuur de spijsvertering ondersteunt bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur maagklachten", "acupunctuur maagklachten Zaandam", "behandeling maagklachten", "acupunctuur maagklachten klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

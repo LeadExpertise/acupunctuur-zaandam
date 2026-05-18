@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/verminderde-weerstand" },
+export const metadata: Metadata = pageMetadata("/klachten/verminderde-weerstand", {
   title: "Acupunctuur bij Verminderde Weerstand Zaandam | Immuunsysteem Versterken",
   description: "Last van een verminderde weerstand, veel verkoudheden of trage genezing? Acupunctuur versterkt het immuunsysteem op natuurlijke wijze. Praktijk in Zaandam.",
   keywords: ["verminderde weerstand", "immuunsysteem versterken", "acupunctuur weerstand", "vaak ziek", "immuunsysteem acupunctuur Zaandam", "wei qi"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

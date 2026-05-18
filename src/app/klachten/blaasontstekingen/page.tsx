@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/blaasontstekingen" },
+export const metadata: Metadata = pageMetadata("/klachten/blaasontstekingen", {
   title: "Acupunctuur bij Terugkerende Blaasontstekingen Zaandam | UTI Preventie",
   description: "Last van terugkerende blaasontstekingen? Acupunctuur versterkt de immuniteit van het urinewegstelsel en helpt blaasontstekingen te voorkomen. Praktijk in Zaandam.",
   keywords: ["blaasontstekingen", "terugkerende blaasontsteking", "cystitis", "UTI preventie", "acupunctuur blaasontsteking", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

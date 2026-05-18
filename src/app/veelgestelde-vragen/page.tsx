@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/veelgestelde-vragen" },
-  title: "Veelgestelde vragen over acupunctuur | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/veelgestelde-vragen", {
+  title: "Veelgestelde vragen over acupunctuur",
   description:
     "Antwoorden op de meestgestelde vragen over acupunctuur: doet het pijn, wordt het vergoed, hoeveel sessies, hoe werkt het? Alles op een rij voor Acupunctuur Zaandam.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "hoe werkt acupunctuur",
     "acupunctuur vragen zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

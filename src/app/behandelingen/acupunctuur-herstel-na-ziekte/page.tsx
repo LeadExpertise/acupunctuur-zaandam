@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-herstel-na-ziekte" },
-  title: "Acupunctuur voor Herstel na Ziekte | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-herstel-na-ziekte", {
+  title: "Acupunctuur voor Herstel na Ziekte",
   description:
     "Acupunctuur ondersteunt het herstel na ziekte door de vitaliteit te herstellen, vermoeidheid te verminderen en het immuunsysteem te versterken. Erkende behandeling in Zaandam.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "hersteltherapie acupunctuur",
     "acupunctuur vitaliteit herstel",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

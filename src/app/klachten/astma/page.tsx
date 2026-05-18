@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/astma" },
+export const metadata: Metadata = pageMetadata("/klachten/astma", {
   title: "Acupunctuur bij Astma Zaandam | Aanvulling op Astmabehandeling",
   description:
     "Acupunctuur als aanvulling op astmabehandeling in Zaandam. Ondersteun de luchtwegfunctie, verminder stress-gerelateerde aanvallen en verbeter uw kwaliteit van leven.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "luchtwegontsteking acupunctuur",
     "astma complementaire zorg zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

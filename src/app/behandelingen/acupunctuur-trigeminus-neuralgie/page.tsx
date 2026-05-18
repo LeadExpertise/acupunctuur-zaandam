@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-trigeminus-neuralgie" },
-  title: "Acupunctuur bij Trigeminusneuralgie | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-trigeminus-neuralgie", {
+  title: "Acupunctuur bij Trigeminusneuralgie",
   description:
     "Acupunctuur bij trigeminusneuralgie in Zaandam. Verlicht de hevige aanvalsgewijze pijn langs de trigeminuszenuw op een natuurlijke en erkende manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "trigeminus neuralgie natuurlijke behandeling",
     "acupunctuur zenuwpijn Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

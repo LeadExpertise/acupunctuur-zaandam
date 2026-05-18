@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-nekklachten" },
-  title: "Acupunctuur bij Nekklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-nekklachten", {
+  title: "Acupunctuur bij Nekklachten",
   description: "Last van nekpijn, whiplash of een nekhernia? Acupunctuur Zaandam behandelt nekklachten effectief en natuurlijk. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur nekklachten", "acupunctuur nekklachten Zaandam", "behandeling nekpijn acupunctuur", "acupunctuur nekpijn klachten", "natuurlijke behandeling nekklachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

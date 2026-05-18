@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/endometriose-pcos" },
+export const metadata: Metadata = pageMetadata("/klachten/endometriose-pcos", {
   title: "Acupunctuur bij Endometriose & PCOS Zaandam",
   description:
     "Acupunctuur als aanvullende ondersteuning bij endometriose en PCOS in Zaandam. Vermindering van pijn, regulatie van hormonen en verbetering van de cyclus via Traditionele Chinese Geneeskunde.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur pijn endometriose zaandam",
     "polycysteus ovarium syndroom acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

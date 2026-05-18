@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-hormonale-disbalans" },
-  title: "Acupunctuur bij Hormonale Disbalans | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-hormonale-disbalans", {
+  title: "Acupunctuur bij Hormonale Disbalans",
   description: "Last van hormonale disbalans? Acupunctuur Zaandam behandelt stemmingswisselingen, vermoeidheid, gewichtsschommelingen en cyclusproblemen. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur hormonale disbalans", "acupunctuur hormonen Zaandam", "behandeling hormonale klachten acupunctuur", "acupunctuur stemmingswisselingen", "acupunctuur hormoonbalans"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

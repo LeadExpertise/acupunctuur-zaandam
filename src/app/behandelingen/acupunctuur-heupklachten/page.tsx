@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-heupklachten" },
-  title: "Acupunctuur bij Heupklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-heupklachten", {
+  title: "Acupunctuur bij Heupklachten",
   description: "Last van heuppijn, heupartrose of trochanterbursa? Acupunctuur Zaandam behandelt heupklachten effectief en natuurlijk. Erkend specialist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur heupklachten", "acupunctuur heupklachten Zaandam", "behandeling heuppijn acupunctuur", "acupunctuur heup klachten", "natuurlijke behandeling heupklachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

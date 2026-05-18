@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/whiplash" },
+export const metadata: Metadata = pageMetadata("/klachten/whiplash", {
   title: "Acupunctuur bij Whiplash Zaandam | Nekletsel & Sportblessures",
   description:
     "Whiplash na verkeersongeval of sportblessure? Acupunctuur in Zaandam verlicht nekpijn, hoofdpijn, duizeligheid en cognitieve klachten na een zweepslagletsel.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "acupunctuur na verkeersongeval",
     "cervicaal acceleratie-deceleratietrauma",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

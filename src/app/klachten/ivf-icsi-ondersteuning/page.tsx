@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/ivf-icsi-ondersteuning" },
+export const metadata: Metadata = pageMetadata("/klachten/ivf-icsi-ondersteuning", {
   title: "Acupunctuur bij IVF/ICSI Ondersteuning Zaandam",
   description:
     "Acupunctuur rondom IVF en ICSI behandelingen in Zaandam. Pre- en post-transfer sessies, stressreductie en ondersteuning van de baarmoeder voor en na embryotransfer.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur baarmoeder innesteling",
     "acupunctuur fertiliteitsbehandeling zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

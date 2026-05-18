@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen" },
-  title: "Behandelingen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen", {
+  title: "Behandelingen",
   description:
     "Bekijk al onze acupunctuurbehandelingen in Zaandam. Van rugpijn en migraine tot stress, hormonale klachten en darmproblemen. Erkend, vergoed en effectief.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur hormonen",
     "acupunctuur Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

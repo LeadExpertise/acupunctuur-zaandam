@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/trigeminus-neuralgie" },
+export const metadata: Metadata = pageMetadata("/klachten/trigeminus-neuralgie", {
   title: "Acupunctuur bij Trigeminusneuralgie Zaandam | Aangezichtspijn",
   description:
     "Trigeminusneuralgie veroorzaakt hevige, schietende pijn in het gezicht. Acupunctuur in Zaandam biedt ondersteuning bij pijnverlichting en vermindering van aanvalsfrequentie.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "acupunctuur trigeminuspijn",
     "trigeminusneuralgie holistische behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

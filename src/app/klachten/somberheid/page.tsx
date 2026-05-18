@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/somberheid" },
+export const metadata: Metadata = pageMetadata("/klachten/somberheid", {
   title: "Acupunctuur bij Somberheid Zaandam | Lage Stemming & Neerslachtigheid",
   description:
     "Acupunctuur ter ondersteuning bij somberheid, lage stemming en neerslachtigheid in Zaandam. Aanvullend op professionele geestelijke gezondheidszorg.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "somberheid TCG zaandam",
     "acupunctuur depressieve klachten",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

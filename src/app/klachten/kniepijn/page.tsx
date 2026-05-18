@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/kniepijn" },
+export const metadata: Metadata = pageMetadata("/klachten/kniepijn", {
   title: "Acupunctuur bij Kniepijn Zaandam | Artrose & Sportknie",
   description:
     "Kniepijn door artrose, een sportknie of bakers cyste? Acupunctuur in Zaandam verlicht pijn en verbetert beweeglijkheid. Erkend en vergoed door zorgverzekeraars.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "knie artrose",
     "acupunctuur pijn knie",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

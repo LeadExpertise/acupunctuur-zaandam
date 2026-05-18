@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-overgangsklachten" },
-  title: "Acupunctuur bij Overgangsklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-overgangsklachten", {
+  title: "Acupunctuur bij Overgangsklachten",
   description: "Last van opvliegers, nachtelijk zweten of stemmingswisselingen door de overgang? Acupunctuur Zaandam biedt natuurlijke verlichting. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur overgangsklachten", "acupunctuur menopauze Zaandam", "acupunctuur opvliegers", "acupunctuur climacterium", "natuurlijke behandeling overgang"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

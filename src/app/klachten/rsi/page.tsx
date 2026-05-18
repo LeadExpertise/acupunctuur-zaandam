@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/rsi" },
+export const metadata: Metadata = pageMetadata("/klachten/rsi", {
   title: "Acupunctuur bij RSI Zaandam | Tennis- & Golferselleboog",
   description:
     "RSI, tennisarm, golferselleboog of carpaal tunnelsyndroom? Acupunctuur in Zaandam verlicht overbelastingspijn in arm, pols en elleboog snel en medicijnvrij.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "epicondylitis lateralis acupunctuur",
     "acupunctuur repetitive strain injury",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

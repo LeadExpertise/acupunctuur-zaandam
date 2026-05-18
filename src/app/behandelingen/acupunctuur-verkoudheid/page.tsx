@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-verkoudheid" },
-  title: "Acupunctuur bij Verkoudheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-verkoudheid", {
+  title: "Acupunctuur bij Verkoudheid",
   description:
     "Acupunctuur bij verkoudheid ondersteunt uw immuunsysteem, verlicht neusverstopping en versnelt herstel. Erkende behandeling in Zaandam, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "acupunctuur neusverstopping",
     "acupunctuur immuunsysteem verkoudheid",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

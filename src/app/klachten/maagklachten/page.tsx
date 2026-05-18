@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/maagklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/maagklachten", {
   title: "Acupunctuur bij Maagklachten Zaandam | Maagpijn & Maagzuur",
   description:
     "Last van maagpijn, maagkramp, maagzuur of misselijkheid? Acupunctuur in Zaandam behandelt maagklachten via Traditionele Chinese Geneeskunde en moderne fysiologie.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "gastritis acupunctuur zaandam",
     "maagkramp acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

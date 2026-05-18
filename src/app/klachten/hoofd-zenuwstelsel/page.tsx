@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/hoofd-zenuwstelsel" },
+export const metadata: Metadata = pageMetadata("/klachten/hoofd-zenuwstelsel", {
   title: "Acupunctuur bij Hoofd- & Zenuwklachten | Zaandam",
   description:
     "Behandeling van hoofdpijn, migraine, tinnitus en zenuwklachten met acupunctuur in Zaandam. Naturlijke verlichting via Traditionele Chinese Geneeskunde.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "zenuwklachten",
     "acupunctuur zaandam hoofd",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

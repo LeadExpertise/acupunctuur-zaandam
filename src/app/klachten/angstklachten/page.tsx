@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/angstklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/angstklachten", {
   title: "Acupunctuur bij Angstklachten Zaandam | Angst & Piekeren",
   description:
     "Acupunctuur bij angstklachten, piekeren en paniekaanvallen in Zaandam. Kalmeer uw zenuwstelsel en herstel innerlijke rust met Traditionele Chinese Geneeskunde.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "sociale angst acupunctuur",
     "angst zenuwstelsel acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

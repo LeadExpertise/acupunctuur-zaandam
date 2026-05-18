@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-overactieve-blaas" },
-  title: "Acupunctuur bij Overactieve Blaas | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-overactieve-blaas", {
+  title: "Acupunctuur bij Overactieve Blaas",
   description:
     "Last van een overactieve blaas? Acupunctuur in Zaandam helpt bij frequente aandrang, urgency-incontinentie en nachtelijk plassen. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "acupunctuur blaasklachten Zaandam",
     "frequente aandrang behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

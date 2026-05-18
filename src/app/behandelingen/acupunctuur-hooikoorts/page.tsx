@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-hooikoorts" },
-  title: "Acupunctuur bij Hooikoorts | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-hooikoorts", {
+  title: "Acupunctuur bij Hooikoorts",
   description: "Last van hooikoorts, niezen, loopneus of jeukende ogen? Acupunctuur vermindert allergische klachten en versterkt uw weerstand. Wetenschappelijk onderbouwd in Zaandam.",
   keywords: ["acupunctuur hooikoorts", "acupunctuur hooikoorts Zaandam", "behandeling hooikoorts", "acupunctuur hooikoorts klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

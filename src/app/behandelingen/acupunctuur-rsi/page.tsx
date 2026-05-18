@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-rsi" },
-  title: "Acupunctuur bij RSI | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-rsi", {
+  title: "Acupunctuur bij RSI",
   description:
     "Last van RSI, tenniselleboog of carpaal tunnelsyndroom? Acupunctuur in Zaandam verlicht pijn en herstelt functie bij repetitive strain injury. Erkend NVA-acupuncturist.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "repetitive strain injury behandeling",
     "acupunctuur overbelasting arm",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

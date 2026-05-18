@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/welke-klachten" },
+export const metadata: Metadata = pageMetadata("/welke-klachten", {
   title: "Klachten Behandeld met Acupunctuur",
   description:
     "Overzicht van alle klachten die wij succesvol behandelen met acupunctuur. Van pijnklachten, stress en burn-out tot hormonale disbalans en maag-darmklachten.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "migraine",
     "vermoeidheid",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

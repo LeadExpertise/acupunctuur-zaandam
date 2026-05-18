@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/aangezichtspijn" },
+export const metadata: Metadata = pageMetadata("/klachten/aangezichtspijn", {
   title: "Acupunctuur bij Aangezichtspijn Zaandam | Gezichtspijn & TMJ",
   description:
     "Last van aangezichtspijn, kaakpijn of gezichtspijn door sinusproblemen of TMJ? Acupunctuur in Zaandam biedt gerichte pijnverlichting en behandelt de onderliggende oorzaak.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "sinuspijn acupunctuur",
     "kaakgewricht pijn acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

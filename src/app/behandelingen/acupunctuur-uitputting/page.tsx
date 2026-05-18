@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-uitputting" },
-  title: "Acupunctuur bij Uitputting | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-uitputting", {
+  title: "Acupunctuur bij Uitputting",
   description: "Volledig uitgeput en op? Acupunctuur Zaandam behandelt uitputting op een diep herstelgerichte manier. Erkend acupuncturist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur uitputting", "acupunctuur uitputting Zaandam", "behandeling uitputting acupunctuur", "acupunctuur totale uitputting", "acupunctuur energie herstellen Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

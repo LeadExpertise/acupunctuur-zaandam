@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/tinnitus" },
+export const metadata: Metadata = pageMetadata("/klachten/tinnitus", {
   title: "Acupunctuur bij Tinnitus Zaandam | Oorsuizen Behandelen",
   description:
     "Last van oorsuizen of tinnitus? Acupunctuur in Zaandam ondersteunt het auditieve systeem, vermindert stressgerelateerd oorsuizen en verbetert de doorbloeding van het binnenoor.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "tinnitus binnenoor behandeling",
     "acupunctuur oorsuizen zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-endometriose-pcos" },
-  title: "Acupunctuur bij Endometriose & PCOS | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-endometriose-pcos", {
+  title: "Acupunctuur bij Endometriose & PCOS",
   description: "Last van endometriose of PCOS? Acupunctuur Zaandam biedt gerichte behandeling voor pijn, hormonale disbalans en vruchtbaarheidsproblemen. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur endometriose", "acupunctuur PCOS", "acupunctuur endometriose Zaandam", "PCOS behandeling acupunctuur", "acupunctuur polycysteus ovarium"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

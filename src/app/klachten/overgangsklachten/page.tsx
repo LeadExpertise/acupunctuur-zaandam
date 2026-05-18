@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/overgangsklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/overgangsklachten", {
   title: "Acupunctuur bij Overgangsklachten Zaandam | Menopauze",
   description:
     "Acupunctuur bij opvliegers, nachtelijk zweten, slaapproblemen en stemmingswisselingen door de overgang in Zaandam. Natuurlijke ondersteuning bij menopauze via TCG.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "perimenopauze acupunctuur zaandam",
     "acupunctuur slaapproblemen overgang zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

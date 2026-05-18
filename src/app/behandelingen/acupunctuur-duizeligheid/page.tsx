@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-duizeligheid" },
-  title: "Acupunctuur bij Duizeligheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-duizeligheid", {
+  title: "Acupunctuur bij Duizeligheid",
   description:
     "Last van duizeligheid, BPPD of cervicogene duizeligheid? Acupunctuur in Zaandam helpt bij functionele en stress-gerelateerde duizeligheid. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "stress duizeligheid acupunctuur",
     "acupunctuur hoofd zenuwstelsel",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

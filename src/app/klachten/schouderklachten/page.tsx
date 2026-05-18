@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/schouderklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/schouderklachten", {
   title: "Acupunctuur bij Schouderklachten Zaandam | Bursitis & Peesirritatie",
   description:
     "Behandeling van schouderklachten, slijmbeursontsteking, peesirritatie en beperkte schoudermobiliteit met acupunctuur in Zaandam. Natuurlijke pijnverlichting.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "peesirritatie schouder behandeling",
     "acupunctuur schouderpijn zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

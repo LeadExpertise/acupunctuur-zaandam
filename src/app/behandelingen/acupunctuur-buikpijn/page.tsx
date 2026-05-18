@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-buikpijn" },
-  title: "Acupunctuur bij Buikpijn | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-buikpijn", {
+  title: "Acupunctuur bij Buikpijn",
   description:
     "Acupunctuur bij buikpijn verlicht krampen, pijn en spijsverteringsklachten. Erkende behandeling in Zaandam, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "acupunctuur buikkrampen",
     "buikpijn alternatieve behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

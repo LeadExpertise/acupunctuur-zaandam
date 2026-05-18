@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-spierpijn" },
-  title: "Acupunctuur bij Spierpijn | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-spierpijn", {
+  title: "Acupunctuur bij Spierpijn",
   description:
     "Last van chronische spierpijn, triggerpoints of spierspanning? Acupunctuur in Zaandam verlicht myofasciale pijn en bevordert spierherstel. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "chronische spierpijn behandeling",
     "acupunctuur sportblessure",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

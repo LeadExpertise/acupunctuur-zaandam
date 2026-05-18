@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/concentratieproblemen" },
+export const metadata: Metadata = pageMetadata("/klachten/concentratieproblemen", {
   title: "Acupunctuur bij Concentratieproblemen Zaandam | Brain Fog",
   description:
     "Last van concentratieproblemen, brain fog of geheugenproblemen? Acupunctuur in Zaandam ondersteunt de cognitieve helderheid door het zenuwstelsel, de slaap en de stressreactie te reguleren.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "mentale vermoeidheid acupunctuur",
     "cognitieve klachten acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

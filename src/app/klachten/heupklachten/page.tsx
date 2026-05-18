@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/heupklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/heupklachten", {
   title: "Acupunctuur bij Heupklachten Zaandam | Coxartrose & Bursitis",
   description:
     "Last van heupklachten, coxartrose of bursitis? Acupunctuur in Zaandam vermindert pijn en verbetert beweeglijkheid. Erkend en deels vergoed door zorgverzekeraars.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "acupunctuur heup artrose",
     "heupklachten behandeling zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/hoofdpijn" },
+export const metadata: Metadata = pageMetadata("/klachten/hoofdpijn", {
   title: "Acupunctuur bij Hoofdpijn Zaandam | Spanningshoofdpijn",
   description:
     "Verminder spanningshoofdpijn en chronische hoofdpijn met acupunctuur in Zaandam. Cochrane-onderzoek bevestigt effectiviteit. Minder hoofdpijn, minder pijnstillers.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "hoofdpijn zonder medicijnen",
     "hoofdpijn behandeling naturlijk zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

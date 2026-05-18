@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/prikkelbare-darm-syndroom" },
+export const metadata: Metadata = pageMetadata("/klachten/prikkelbare-darm-syndroom", {
   title: "Acupunctuur bij Prikkelbare Darm Syndroom (PDS) Zaandam",
   description:
     "Behandeling van PDS, buikpijn, opgeblazen gevoel en darmkrampen met acupunctuur in Zaandam. Reguleer de hersen-darm-verbinding op een natuurlijke manier.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "opgeblazen gevoel acupunctuur zaandam",
     "darmklachten acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

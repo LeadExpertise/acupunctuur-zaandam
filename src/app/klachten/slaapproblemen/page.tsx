@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/slaapproblemen" },
+export const metadata: Metadata = pageMetadata("/klachten/slaapproblemen", {
   title: "Acupunctuur bij Slaapproblemen & Insomnia Zaandam",
   description:
     "Herstel uw slaap met acupunctuur in Zaandam. Behandeling van insomnia, moeilijk doorslapen en slechte slaapkwaliteit. Natuurlijk alternatief voor slaaptabletten.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "slechte slaap behandeling zaandam",
     "doorslapen acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

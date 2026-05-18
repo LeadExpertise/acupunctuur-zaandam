@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/blaas-urogenitaal" },
+export const metadata: Metadata = pageMetadata("/klachten/blaas-urogenitaal", {
   title: "Acupunctuur bij Blaasklachten & Urologische Klachten | Zaandam",
   description:
     "Behandeling van blaasontstekingen, overactieve blaas, incontinentie en blaasklachten met acupunctuur in Zaandam. Natuurlijke regulatie via Traditionele Chinese Geneeskunde.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "urineverlies acupunctuur",
     "acupunctuur blaas zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

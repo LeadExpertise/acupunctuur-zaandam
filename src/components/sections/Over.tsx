@@ -1,5 +1,5 @@
 const kwalificaties = [
-  "ZHONG gecertificeerd acupuncturist",
+  "NVA-geregistreerd acupuncturist",
   "BAG-geregistreerd (zorgverzekeraar erkend)",
   "Gediplomeerd in Traditionele Chinese Geneeskunde",
   "Gespecialiseerd in westerse en oosterse integratieve zorg",

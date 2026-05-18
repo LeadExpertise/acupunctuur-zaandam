@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-chronische-ontstekingsklachten" },
-  title: "Acupunctuur bij Chronische Ontstekingen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-chronische-ontstekingsklachten", {
+  title: "Acupunctuur bij Chronische Ontstekingen",
   description: "Chronische laaggradigige ontstekingen, auto-immuun aanvullende ondersteuning of gewrichtsonstekingen? Ontdek hoe acupunctuur het immuunsysteem moduleert in Zaandam.",
   keywords: ["acupunctuur chronische ontstekingen", "acupunctuur chronische ontstekingen Zaandam", "behandeling chronische ontstekingen", "acupunctuur ontstekingsklachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

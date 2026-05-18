@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/hormonen-vrouwenklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/hormonen-vrouwenklachten", {
   title: "Acupunctuur bij Hormoonklachten & Vrouwenklachten | Zaandam",
   description:
     "Behandeling van menstruatieklachten, PMS, vruchtbaarheidsproblemen, overgangsklachten en hormonale disbalans met acupunctuur in Zaandam.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "endometriose acupunctuur",
     "acupunctuur zwangerschap",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/fibromyalgie" },
+export const metadata: Metadata = pageMetadata("/klachten/fibromyalgie", {
   title: "Acupunctuur bij Fibromyalgie Zaandam | Chronische Pijn & Vermoeidheid",
   description:
     "Fibromyalgie met chronische spierpijn, vermoeidheid en slaapproblemen? Acupunctuur in Zaandam verlicht pijn, verbetert slaap en energie bij fibromyalgie.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "tender points behandeling",
     "fibromyalgie TCG",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

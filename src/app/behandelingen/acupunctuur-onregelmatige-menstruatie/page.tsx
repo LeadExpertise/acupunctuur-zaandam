@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-onregelmatige-menstruatie" },
-  title: "Acupunctuur bij Onregelmatige Menstruatie | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-onregelmatige-menstruatie", {
+  title: "Acupunctuur bij Onregelmatige Menstruatie",
   description: "Onregelmatige cyclus, uitblijvende menstruatie of PCOS-gerelateerde cyclusproblemen? Acupunctuur herstelt uw hormoonbalans bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur onregelmatige menstruatie", "acupunctuur onregelmatige menstruatie Zaandam", "behandeling onregelmatige menstruatie", "acupunctuur cyclus klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

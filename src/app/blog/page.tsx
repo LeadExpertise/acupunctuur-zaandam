@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedPosts, formatDate } from "@/lib/blog";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/blog" },
-  title: "Blog — Inzichten over Acupunctuur & Gezondheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/blog", {
+  title: "Blog — Inzichten over Acupunctuur & Gezondheid",
   description:
     "Lees artikelen over acupunctuur, traditionele Chinese geneeskunde, gezondheid en welzijn. Praktische inzichten van Acupunctuur Zaandam.",
   openGraph: {
-    title: "Blog | Acupunctuur Zaandam",
+    title: "Blog",
     description:
       "Artikelen over acupunctuur, gezondheid en welzijn van Acupunctuur Zaandam.",
     type: "website",
   },
-};
+});
 
 export default function BlogOverviewPage() {
   const posts = getPublishedPosts();

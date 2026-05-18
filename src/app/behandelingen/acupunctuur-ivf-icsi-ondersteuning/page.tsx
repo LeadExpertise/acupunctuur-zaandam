@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-ivf-icsi-ondersteuning" },
-  title: "Acupunctuur bij IVF & ICSI Ondersteuning | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-ivf-icsi-ondersteuning", {
+  title: "Acupunctuur bij IVF & ICSI Ondersteuning",
   description: "Ondersteun uw IVF- of ICSI-traject met acupunctuur in Zaandam. Wetenschappelijk onderbouwde behandeling ter verbetering van de zwangerschapskans. Erkend, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur IVF", "acupunctuur ICSI", "acupunctuur IVF Zaandam", "vruchtbaarheidsacupunctuur IVF", "acupunctuur zwangerschapskans verhogen"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

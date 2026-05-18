@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-voedselintoleranties" },
-  title: "Acupunctuur bij Voedselintoleranties | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-voedselintoleranties", {
+  title: "Acupunctuur bij Voedselintoleranties",
   description:
     "Last van voedselintoleranties? Acupunctuur in Zaandam verlicht symptomen van lactose-intolerantie, glutengevoeligheid en fructose-malabsorptie. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "acupunctuur spijsvertering Zaandam",
     "chronische spijsverteringsklachten acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

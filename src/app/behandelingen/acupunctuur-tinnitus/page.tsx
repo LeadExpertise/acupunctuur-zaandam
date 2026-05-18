@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-tinnitus" },
-  title: "Acupunctuur bij Tinnitus | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-tinnitus", {
+  title: "Acupunctuur bij Tinnitus",
   description:
     "Last van tinnitus of oorsuizen? Acupunctuur in Zaandam helpt bij subjectieve tinnitus, stress-gerelateerd oorsuizen en tinnitus na gehoorschade. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "subjectieve tinnitus behandeling",
     "acupunctuur hoofd zenuwstelsel",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

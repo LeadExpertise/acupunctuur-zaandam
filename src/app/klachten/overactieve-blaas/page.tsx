@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/overactieve-blaas" },
+export const metadata: Metadata = pageMetadata("/klachten/overactieve-blaas", {
   title: "Acupunctuur bij Overactieve Blaas Zaandam | Aandrangincontinentie",
   description: "Last van een overactieve blaas, urgentie-incontinentie of nycturie? Acupunctuur kalmeert de blaas en vermindert aandrang. Praktijk in Zaandam.",
   keywords: ["overactieve blaas", "aandrangincontinentie", "urgentie incontinentie", "nycturie", "acupunctuur overactieve blaas", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/hooikoorts" },
+export const metadata: Metadata = pageMetadata("/klachten/hooikoorts", {
   title: "Acupunctuur bij Hooikoorts Zaandam | Minder Niezen, Minder Klachten",
   description:
     "Verminder hooikoorts symptomen met acupunctuur in Zaandam. Minder niezen, jeukende ogen en verstopte neus. Onderbouwd door de ACUSAR-studie (Annals of Internal Medicine 2013).",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "hooikoorts alternatieve behandeling",
     "acupunctuur hooikoorts onderzoek",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

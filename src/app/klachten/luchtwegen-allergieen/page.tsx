@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/luchtwegen-allergieen" },
+export const metadata: Metadata = pageMetadata("/klachten/luchtwegen-allergieen", {
   title: "Acupunctuur bij Luchtwegklachten & Allergieën | Zaandam",
   description:
     "Behandeling van hooikoorts, astma, sinusitis en allergische klachten met acupunctuur in Zaandam. Versterk uw Wie-Qi en verminder allergische reacties.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur allergie",
     "luchtwegen acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

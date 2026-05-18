@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/burn-out" },
+export const metadata: Metadata = pageMetadata("/klachten/burn-out", {
   title: "Acupunctuur bij Burn-out Zaandam | Herstel & Energie",
   description:
     "Ondersteuning bij burn-out herstel met acupunctuur in Zaandam. Reguleer uw zenuwstelsel, herstel uw slaap en bouw uw energie stap voor stap op.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur energieherstel zaandam",
     "burn-out begeleiding acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

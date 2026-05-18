@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/spijsvertering-buik" },
+export const metadata: Metadata = pageMetadata("/klachten/spijsvertering-buik", {
   title: "Acupunctuur bij Spijsverteringsklachten & Buikpijn | Zaandam",
   description:
     "Behandeling van PDS, maagklachten, reflux, obstipatie en opgeblazen gevoel met acupunctuur in Zaandam. Natuurlijke regulatie van uw spijsvertering.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "prikkelbare darm acupunctuur",
     "buikpijn behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/immuunsysteem-herstel" },
+export const metadata: Metadata = pageMetadata("/klachten/immuunsysteem-herstel", {
   title: "Acupunctuur voor Immuunsysteem & Herstel | Zaandam",
   description:
     "Versterk uw weerstand en herstel na ziekte met acupunctuur in Zaandam. Behandeling bij verminderde immuniteit, Long COVID en chronische ontstekingen.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "chronische ontsteking acupunctuur",
     "acupunctuur vermoeidheid na corona",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

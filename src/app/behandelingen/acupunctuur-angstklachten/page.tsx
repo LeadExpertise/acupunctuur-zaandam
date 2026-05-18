@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-angstklachten" },
-  title: "Acupunctuur bij Angstklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-angstklachten", {
+  title: "Acupunctuur bij Angstklachten",
   description: "Last van angstklachten, paniekaanvallen of piekeren? Acupunctuur Zaandam biedt natuurlijke ondersteuning naast professionele geestelijke gezondheidszorg. Erkend acupuncturist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur angstklachten", "acupunctuur angst Zaandam", "behandeling angstklachten acupunctuur", "acupunctuur paniekaanvallen", "acupunctuur angstklachten Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

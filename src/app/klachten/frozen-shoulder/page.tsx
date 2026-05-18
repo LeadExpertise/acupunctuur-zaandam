@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/frozen-shoulder" },
+export const metadata: Metadata = pageMetadata("/klachten/frozen-shoulder", {
   title: "Acupunctuur bij Frozen Shoulder Zaandam | Adhesieve Capsulitis",
   description:
     "Last van een bevroren schouder (frozen shoulder)? Acupunctuur in Zaandam verlicht pijn, verbetert de beweeglijkheid en versnelt herstel bij adhesieve capsulitis.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "acupunctuur schouder bewegingsbeperking",
     "bevroren schouder herstel",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

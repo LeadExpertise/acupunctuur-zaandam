@@ -3,7 +3,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata("/algemene-voorwaarden", {
-  title: "Algemene Voorwaarden | Acupunctuur Zaandam",
+  title: "Algemene Voorwaarden",
   description:
     "Algemene voorwaarden van Acupunctuur Zaandam. Lees hier de voorwaarden rondom afspraken, annulering, tarieven en behandelovereenkomst.",
   robots: { index: true, follow: true },

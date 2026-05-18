@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-kniepijn" },
-  title: "Acupunctuur bij Kniepijn | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-kniepijn", {
+  title: "Acupunctuur bij Kniepijn",
   description: "Last van kniepijn, artrose of een knieblessure? Acupunctuur Zaandam behandelt kniepijn effectief en natuurlijk. Erkend specialist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur kniepijn", "acupunctuur kniepijn Zaandam", "behandeling kniepijn acupunctuur", "acupunctuur knie klachten", "natuurlijke behandeling kniepijn"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

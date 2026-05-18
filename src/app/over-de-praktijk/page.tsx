@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/over-de-praktijk" },
-  title: "Over de Praktijk | Acupuncturist Sam de Vries | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/over-de-praktijk", {
+  title: "Over de Praktijk | Acupuncturist Sam de Vries",
   description:
     "Maak kennis met Sam de Vries, acupuncturist in Zaandam. Psychologische achtergrond gecombineerd met Traditionele Chinese Geneeskunde. Persoonlijke, holistische zorg voor lichaam en geest.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "sam de vries acupunctuur",
     "acupunctuur zaandam over ons",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -22,20 +22,70 @@ const jsonLd = {
     {
       "@type": "MedicalWebPage",
       "@id": "https://www.acupunctuurzaandam.nl/over-de-praktijk",
-      name: "Over de Praktijk | Acupunctuur Zaandam",
+      name: "Over de Praktijk",
       description:
         "Maak kennis met acupuncturist Sam de Vries en de filosofie achter Acupunctuur Zaandam.",
       url: "https://www.acupunctuurzaandam.nl/over-de-praktijk",
       about: { "@type": "MedicalTherapy", name: "Acupunctuur" },
-      author: {
-        "@type": "Person",
-        name: "Sam de Vries",
-        jobTitle: "Acupuncturist",
-        worksFor: {
-          "@type": "MedicalClinic",
-          name: "Acupunctuur Zaandam",
+      mainEntity: { "@id": "https://www.acupunctuurzaandam.nl/#sam-de-vries" },
+      inLanguage: "nl-NL",
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.acupunctuurzaandam.nl/#sam-de-vries",
+      name: "Sam de Vries",
+      givenName: "Sam",
+      familyName: "de Vries",
+      jobTitle: "Acupuncturist",
+      description:
+        "NVA-geregistreerd acupuncturist met een psychologische achtergrond, gespecialiseerd in Traditionele Chinese Geneeskunde voor pijn, stress, burn-out, slaapproblemen, migraine en vrouwenklachten.",
+      url: "https://www.acupunctuurzaandam.nl/over-de-praktijk",
+      telephone: "+31657998330",
+      worksFor: { "@id": "https://www.acupunctuurzaandam.nl/#practice" },
+      knowsAbout: [
+        "Acupunctuur",
+        "Traditionele Chinese Geneeskunde",
+        "Pijnbehandeling",
+        "Stressreductie",
+        "Burn-out herstel",
+        "Slaapproblemen",
+        "Migraine en hoofdpijn",
+        "Vrouwenklachten en hormonale balans",
+        "Integratieve geneeskunde",
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Professional Membership",
+          name: "NVA — Nederlandse Vereniging voor Acupunctuur",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Nederlandse Vereniging voor Acupunctuur",
+            url: "https://www.acupunctuur.nl",
+          },
         },
-      },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Professional Membership",
+          name: "TCMA — Traditional Chinese Medicine Association",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Insurance Registration",
+          name: "BAG-geregistreerd (zorgverzekeraar erkend)",
+        },
+      ],
+      memberOf: [
+        {
+          "@type": "Organization",
+          name: "Nederlandse Vereniging voor Acupunctuur (NVA)",
+          url: "https://www.acupunctuur.nl",
+        },
+        {
+          "@type": "Organization",
+          name: "Traditional Chinese Medicine Association (TCMA)",
+        },
+      ],
     },
     {
       "@type": "BreadcrumbList",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/restless-legs" },
+export const metadata: Metadata = pageMetadata("/klachten/restless-legs", {
   title: "Acupunctuur bij Restless Legs Zaandam | Rusteloze Benen",
   description:
     "Last van rusteloze benen of restless legs syndroom? Acupunctuur in Zaandam vermindert de onaangename gewaarwordingen, verbetert de slaap en ondersteunt de dopaminebalans.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Willis-Ekbom acupunctuur",
     "tintelingen benen nacht acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

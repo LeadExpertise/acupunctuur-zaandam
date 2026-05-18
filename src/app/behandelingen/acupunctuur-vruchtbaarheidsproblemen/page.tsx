@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-vruchtbaarheidsproblemen" },
-  title: "Acupunctuur bij Vruchtbaarheidsproblemen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-vruchtbaarheidsproblemen", {
+  title: "Acupunctuur bij Vruchtbaarheidsproblemen",
   description:
     "Acupunctuur ter ondersteuning van vruchtbaarheid in Zaandam. Hulp bij onverklaarbare subfertiliteit, PCOS, hormonale disbalans en IVF/ICSI-voorbereiding. Erkend NVA-acupuncturist.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "zwanger worden acupunctuur Zaandam",
     "hormonale disbalans acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

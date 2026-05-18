@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-menstruatieklachten" },
-  title: "Acupunctuur bij Menstruatieklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-menstruatieklachten", {
+  title: "Acupunctuur bij Menstruatieklachten",
   description: "Pijnlijke menstruatie, hevige bloedingen of PMS? Acupunctuur vermindert menstruatiepijn en herstelt de cyclus. Wetenschappelijk onderbouwd bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur menstruatieklachten", "acupunctuur menstruatieklachten Zaandam", "behandeling menstruatieklachten", "acupunctuur menstruatieklachten klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

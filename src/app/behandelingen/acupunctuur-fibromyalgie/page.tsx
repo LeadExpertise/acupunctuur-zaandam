@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-fibromyalgie" },
-  title: "Acupunctuur bij Fibromyalgie | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-fibromyalgie", {
+  title: "Acupunctuur bij Fibromyalgie",
   description:
     "Acupunctuur bij fibromyalgie vermindert wijdverspreide pijn, vermoeidheid en slaapproblemen. Erkende behandeling in Zaandam, wetenschappelijk onderzocht, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "fibromyalgie pijn acupunctuur",
     "chronische pijn fibromyalgie acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

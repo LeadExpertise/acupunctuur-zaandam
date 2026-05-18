@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-long-covid" },
-  title: "Acupunctuur bij Long COVID | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-long-covid", {
+  title: "Acupunctuur bij Long COVID",
   description: "Aanhoudende vermoeidheid, brain fog of ademhalingsklachten na COVID-19? Ontdek hoe acupunctuur herstel ondersteunt bij Post-COVID syndroom in Zaandam.",
   keywords: ["acupunctuur long covid", "acupunctuur long covid Zaandam", "behandeling long covid", "acupunctuur post-covid klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

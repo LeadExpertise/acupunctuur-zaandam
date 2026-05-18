@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/pijnbestrijding" },
+export const metadata: Metadata = pageMetadata("/klachten/pijnbestrijding", {
   title: "Acupunctuur als Pijnbestrijding Zaandam | Chronische Pijn",
   description: "Chronische pijn behandelen zonder afhankelijkheid van pijnstillers? Acupunctuur is door de WHO erkend als effectieve pijnbestrijding. Praktijk in Zaandam.",
   keywords: ["pijnbestrijding", "chronische pijn", "acupunctuur pijn", "pijn acupunctuur", "WHO acupunctuur", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

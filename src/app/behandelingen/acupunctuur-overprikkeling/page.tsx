@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-overprikkeling" },
-  title: "Acupunctuur bij Overprikkeling | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-overprikkeling", {
+  title: "Acupunctuur bij Overprikkeling",
   description:
     "Acupunctuur bij overprikkeling in Zaandam. Kalmeer een overbelast zenuwstelsel, verminder prikkelbaarheid en herstel innerlijke rust op een natuurlijke manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "sensorische overbelasting behandeling",
     "acupunctuur stress overprikkeling Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

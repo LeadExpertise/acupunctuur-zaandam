@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/herstel-na-ziekte" },
+export const metadata: Metadata = pageMetadata("/klachten/herstel-na-ziekte", {
   title: "Acupunctuur bij Herstel na Ziekte Zaandam | Convalescent Zorg",
   description: "Herstelt u langzaam na ziekte, operatie of infectie? Acupunctuur ondersteunt uw herstelproces, versnelt genezing en helpt uw energie terug te krijgen. Praktijk in Zaandam.",
   keywords: ["herstel na ziekte", "convalescent", "acupunctuur herstel", "post-viraal vermoeidheid", "herstel na operatie", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

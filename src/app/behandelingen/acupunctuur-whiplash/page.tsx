@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-whiplash" },
-  title: "Acupunctuur bij Whiplash | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-whiplash", {
+  title: "Acupunctuur bij Whiplash",
   description:
     "Acupunctuur bij whiplash verlicht nekpijn, hoofdpijn en duizeligheid na een whiplashtrauma. Erkende behandeling in Zaandam, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "whiplash nekpijn acupunctuur",
     "whiplashtrauma herstel acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/darmklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/darmklachten", {
   title: "Acupunctuur bij Darmklachten Zaandam | Darmproblemen",
   description:
     "Last van darmkramp, diarree, wisselende ontlasting of opgeblazen gevoel? Acupunctuur in Zaandam behandelt darmklachten via TCG en moderne fysiologie.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "hersen-darm-as acupunctuur",
     "darmontsteking acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

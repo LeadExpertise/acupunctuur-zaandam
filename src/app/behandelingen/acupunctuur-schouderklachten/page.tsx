@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-schouderklachten" },
-  title: "Acupunctuur bij Schouderklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-schouderklachten", {
+  title: "Acupunctuur bij Schouderklachten",
   description: "Last van schouderklachten, frozen shoulder of RSI? Acupunctuur Zaandam behandelt schouderklachten effectief en duurzaam. Erkend specialist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur schouderklachten", "acupunctuur schouderklachten Zaandam", "behandeling schouderklachten acupunctuur", "acupunctuur schouder klachten", "natuurlijke behandeling schouderklachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

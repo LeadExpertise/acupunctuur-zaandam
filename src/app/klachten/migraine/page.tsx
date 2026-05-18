@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/migraine" },
+export const metadata: Metadata = pageMetadata("/klachten/migraine", {
   title: "Acupunctuur bij Migraine Zaandam | Aanvallen Voorkomen",
   description:
     "Verlaag de frequentie en intensiteit van migraineaanvallen met acupunctuur in Zaandam. Onderbouwd door Cochrane-onderzoek. Minder aanvallen, minder medicatie.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "migraine zonder medicatie",
     "acupunctuur migraine cochrane",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

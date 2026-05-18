@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/chronische-vermoeidheid" },
+export const metadata: Metadata = pageMetadata("/klachten/chronische-vermoeidheid", {
   title: "Acupunctuur bij Chronische Vermoeidheid Zaandam | CVS",
   description:
     "Ondersteuning bij chronisch vermoeidheidssyndroom (CVS/ME) en post-viraal herstel met acupunctuur in Zaandam. Zachte, zorgvuldige behandeling afgestemd op uw energieniveau.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "chronisch vermoeidheidssyndroom behandeling",
     "acupunctuur CVS zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/uitputting" },
+export const metadata: Metadata = pageMetadata("/klachten/uitputting", {
   title: "Acupunctuur bij Uitputting Zaandam | Totale Uitputting & Herstel",
   description:
     "Acupunctuur bij totale lichamelijke en mentale uitputting in Zaandam. Ondersteun uw herstel na burn-out of langdurige overbelasting met Traditionele Chinese Geneeskunde.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur post burn-out fase zaandam",
     "uitputting TCG zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

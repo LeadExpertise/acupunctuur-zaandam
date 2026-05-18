@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/stressklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/stressklachten", {
   title: "Acupunctuur bij Stressklachten Zaandam | Chronische Spanning",
   description:
     "Verlicht chronische spanning en stressklachten met acupunctuur in Zaandam. Herstel uw zenuwstelsel en doorbreek de cirkel van stress, gespannen spieren en slaaptekort.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur overbelasting zaandam",
     "spanning in nek schouders acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

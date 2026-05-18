@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/overprikkeling" },
+export const metadata: Metadata = pageMetadata("/klachten/overprikkeling", {
   title: "Acupunctuur bij Overprikkeling Zaandam | Sensory Overload",
   description:
     "Last van overprikkeling, sensory overload of een overgevoelig zenuwstelsel? Acupunctuur in Zaandam kalmeert het zenuwstelsel en helpt u herstellen van overstimulatie.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "overprikkeling autisme acupunctuur",
     "zenuwstelsel kalmeren acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

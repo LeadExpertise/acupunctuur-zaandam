@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/sinusitis" },
+export const metadata: Metadata = pageMetadata("/klachten/sinusitis", {
   title: "Acupunctuur bij Sinusitis Zaandam | Bijholteontsteking",
   description:
     "Last van sinusitis, bijholteontsteking of chronische neusverstopping? Acupunctuur in Zaandam behandelt acute en chronische sinusitis via TCG en doorbevordering van de slijmvliesdrainage.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "aangezichtspijn sinusitis acupunctuur",
     "slijmvliesdrainage acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

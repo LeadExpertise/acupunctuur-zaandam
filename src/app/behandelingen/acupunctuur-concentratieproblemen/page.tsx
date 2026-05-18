@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-concentratieproblemen" },
-  title: "Acupunctuur bij Concentratieproblemen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-concentratieproblemen", {
+  title: "Acupunctuur bij Concentratieproblemen",
   description:
     "Acupunctuur bij concentratieproblemen in Zaandam. Verbeter uw focus, helderheid en mentale uithouding op een natuurlijke en erkende manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "brain fog acupunctuur",
     "acupunctuur hoofd zenuwstelsel Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

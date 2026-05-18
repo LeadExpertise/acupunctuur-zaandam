@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-ademhalingsproblemen" },
-  title: "Acupunctuur bij Ademhalingsproblemen | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-ademhalingsproblemen", {
+  title: "Acupunctuur bij Ademhalingsproblemen",
   description: "Last van kortademigheid, chronische bronchitis of stressgerelateerde ademhaling? Ontdek hoe acupunctuur uw luchtwegen ondersteunt bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur ademhalingsproblemen", "acupunctuur ademhalingsproblemen Zaandam", "behandeling ademhalingsproblemen", "acupunctuur ademhalingsproblemen klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

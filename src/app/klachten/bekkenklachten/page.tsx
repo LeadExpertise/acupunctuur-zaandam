@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/bekkenklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/bekkenklachten", {
   title: "Acupunctuur bij Bekkenklachten Zaandam | Bekkenpijn Zwangerschap",
   description:
     "Acupunctuur bij bekkenklachten en bekkenpijn tijdens en na de zwangerschap in Zaandam. Ondersteuning bij PGP, SI-gewrichtspijn en schaambeenpijn via TCG.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "SI gewricht pijn acupunctuur",
     "schaambeenpijn zwangerschap acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/stress-energie-mentaal" },
+export const metadata: Metadata = pageMetadata("/klachten/stress-energie-mentaal", {
   title: "Acupunctuur bij Stress, Burn-out & Vermoeidheid | Zaandam",
   description:
     "Herstel van stress, burn-out, chronische vermoeidheid en slaapproblemen met acupunctuur in Zaandam. Natuurlijke ondersteuning voor uw zenuwstelsel en energie.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "angstklachten behandeling",
     "chronische vermoeidheid",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

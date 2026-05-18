@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/ademhalingsproblemen" },
+export const metadata: Metadata = pageMetadata("/klachten/ademhalingsproblemen", {
   title: "Acupunctuur bij Ademhalingsproblemen Zaandam | Kortademigheid",
   description:
     "Last van kortademigheid, hyperventilatie of COPD? Acupunctuur in Zaandam ondersteunt de ademhalingsfunctie via TCG en ontspanning van de ademhalingsspieren.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "dyspneu acupunctuur zaandam",
     "ademhaling verbeteren acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

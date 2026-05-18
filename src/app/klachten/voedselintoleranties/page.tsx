@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/voedselintoleranties" },
+export const metadata: Metadata = pageMetadata("/klachten/voedselintoleranties", {
   title: "Acupunctuur bij Voedselintoleranties Zaandam | Gevoelig Spijsverteringsstelsel",
   description:
     "Last van voedselintoleranties, lactose- of glutengevoeligheid? Acupunctuur in Zaandam ondersteunt de spijsvertering en moduleert de immuunrespons op voeding.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "gevoelig spijsverteringsstelsel acupunctuur",
     "voedselovergevoeligheid behandeling zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

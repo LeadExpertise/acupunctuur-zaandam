@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-blaasklachten" },
-  title: "Acupunctuur bij Blaasklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-blaasklachten", {
+  title: "Acupunctuur bij Blaasklachten",
   description: "Last van aandrangklachten, recidiverende blaasproblemen of chronische blaaspijn? Ontdek hoe acupunctuur de blaas ondersteunt bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur blaasklachten", "acupunctuur blaasklachten Zaandam", "behandeling blaasklachten", "acupunctuur blaasklachten klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

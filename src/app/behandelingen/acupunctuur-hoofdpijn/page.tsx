@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-hoofdpijn" },
-  title: "Acupunctuur bij Hoofdpijn | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-hoofdpijn", {
+  title: "Acupunctuur bij Hoofdpijn",
   description:
     "Acupunctuur bij hoofdpijn vermindert de frequentie en intensiteit van spanningshoofdpijn en andere vormen van hoofdpijn. Wetenschappelijk onderbouwd, erkend en vergoed in Zaandam.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "spanningshoofdpijn acupunctuur",
     "chronische hoofdpijn acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

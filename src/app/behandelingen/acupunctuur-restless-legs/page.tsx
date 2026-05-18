@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-restless-legs" },
-  title: "Acupunctuur bij Restless Legs | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-restless-legs", {
+  title: "Acupunctuur bij Restless Legs",
   description:
     "Acupunctuur bij restless legs in Zaandam. Verminder de onrustige, pijnlijke sensaties in de benen &rsquo;s avonds en &rsquo;s nachts op een natuurlijke manier.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "onrustige benen behandeling",
     "acupunctuur slaap zenuwstelsel Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

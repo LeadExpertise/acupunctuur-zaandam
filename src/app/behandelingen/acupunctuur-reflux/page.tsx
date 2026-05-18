@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-reflux" },
-  title: "Acupunctuur bij Reflux | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-reflux", {
+  title: "Acupunctuur bij Reflux",
   description:
     "Acupunctuur bij reflux vermindert zuurbranden, oprispingen en maagzuurklachten. Erkende behandeling in Zaandam, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "acupunctuur maagzuur",
     "GERD acupunctuur behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

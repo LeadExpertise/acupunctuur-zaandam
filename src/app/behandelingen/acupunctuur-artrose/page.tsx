@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-artrose" },
-  title: "Acupunctuur bij Artrose | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-artrose", {
+  title: "Acupunctuur bij Artrose",
   description: "Pijn en stijfheid door artrose? Acupunctuur vermindert gewrichtspijn, verbetert de beweeglijkheid en kan een operatie helpen uitstellen. Erkend & vergoed in Zaandam.",
   keywords: ["acupunctuur artrose", "acupunctuur artrose Zaandam", "behandeling artrose", "acupunctuur artrose klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

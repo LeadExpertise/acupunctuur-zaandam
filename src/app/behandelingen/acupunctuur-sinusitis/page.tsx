@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-sinusitis" },
-  title: "Acupunctuur bij Sinusitis | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-sinusitis", {
+  title: "Acupunctuur bij Sinusitis",
   description:
     "Last van chronische of recidiverende sinusitis? Acupunctuur in Zaandam verlicht bijholteontsteking, verstopte neus en aangezichtspijn. Erkend NVA-acupuncturist, vergoeding mogelijk.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "allergische sinusitis acupunctuur",
     "acupunctuur luchtwegen",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/leefstijl-ondersteuning" },
+export const metadata: Metadata = pageMetadata("/klachten/leefstijl-ondersteuning", {
   title: "Acupunctuur voor Vitaliteit & Leefstijlondersteuning | Zaandam",
   description:
     "Ondersteuning bij stoppen met roken, vitaliteitsherstel en algemene energieopbouw met acupunctuur in Zaandam. Investeer preventief in uw duurzame gezondheid.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "preventieve acupunctuur",
     "acupunctuur pijnbestrijding zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

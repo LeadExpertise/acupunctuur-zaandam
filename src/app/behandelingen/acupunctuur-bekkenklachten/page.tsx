@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-bekkenklachten" },
-  title: "Acupunctuur bij Bekkenklachten | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-bekkenklachten", {
+  title: "Acupunctuur bij Bekkenklachten",
   description: "Bekkenpijn tijdens zwangerschap, bekkenbodemklachten of symfysiolyse? Ontdek hoe acupunctuur pijn verlicht en stabiliteit herstelt bij Acupunctuur Zaandam.",
   keywords: ["acupunctuur bekkenklachten", "acupunctuur bekkenklachten Zaandam", "behandeling bekkenklachten", "acupunctuur bekkenklachten klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

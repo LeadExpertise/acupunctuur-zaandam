@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-astma" },
-  title: "Acupunctuur bij Astma | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-astma", {
+  title: "Acupunctuur bij Astma",
   description: "Acupunctuur als aanvullende ondersteuning bij astma: minder aanvallen, ontspannen luchtwegen en verbetering van de ademhalingskwaliteit. Erkend & vergoed in Zaandam.",
   keywords: ["acupunctuur astma", "acupunctuur astma Zaandam", "behandeling astma", "acupunctuur astma klachten"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

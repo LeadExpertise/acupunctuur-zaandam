@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/onregelmatige-menstruatie" },
+export const metadata: Metadata = pageMetadata("/klachten/onregelmatige-menstruatie", {
   title: "Acupunctuur bij Onregelmatige Menstruatie Zaandam",
   description:
     "Acupunctuur voor het reguleren van een onregelmatige cyclus in Zaandam. Van uitblijvende menstruatie tot korte of lange cycli — de TCG biedt gerichte ondersteuning.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "onregelmatige cyclus PCOS acupunctuur",
     "acupunctuur HPO-as zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

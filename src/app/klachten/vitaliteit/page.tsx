@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/vitaliteit" },
+export const metadata: Metadata = pageMetadata("/klachten/vitaliteit", {
   title: "Acupunctuur voor Vitaliteit Zaandam | Energie & Welzijn",
   description: "Wilt u meer energie, veerkracht en levensvreugde? Acupunctuur ondersteunt uw vitaliteit, versterkt de weerstand en helpt u optimaal te functioneren. Praktijk in Zaandam.",
   keywords: ["vitaliteit", "energie acupunctuur", "welzijn", "preventieve acupunctuur", "veerkracht", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

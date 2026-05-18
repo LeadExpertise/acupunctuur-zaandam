@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/zwangerschapsklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/zwangerschapsklachten", {
   title: "Acupunctuur bij Zwangerschapsklachten Zaandam | Misselijkheid & Pijn",
   description:
     "Acupunctuur bij misselijkheid, rugpijn, vermoeidheid en andere zwangerschapsklachten in Zaandam. Veilige, bewezen ondersteuning tijdens de zwangerschap via TCG.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "acupunctuur bekkenpijn zwangerschap zaandam",
     "moxibustion stuitligging zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

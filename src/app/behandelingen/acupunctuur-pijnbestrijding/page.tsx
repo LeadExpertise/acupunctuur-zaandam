@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-pijnbestrijding" },
-  title: "Acupunctuur voor Pijnbestrijding | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-pijnbestrijding", {
+  title: "Acupunctuur voor Pijnbestrijding",
   description:
     "Acupunctuur is een bewezen effectieve methode voor pijnbestrijding bij chronische en acute pijn. Erkende behandeling in Zaandam, wetenschappelijk onderbouwd, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "acupunctuur pijn verlichten",
     "pijnbehandeling acupunctuur Zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

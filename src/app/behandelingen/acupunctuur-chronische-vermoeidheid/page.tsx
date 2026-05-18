@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-chronische-vermoeidheid" },
-  title: "Acupunctuur bij Chronische Vermoeidheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-chronische-vermoeidheid", {
+  title: "Acupunctuur bij Chronische Vermoeidheid",
   description: "Last van chronische vermoeidheid of ME/CVS? Acupunctuur Zaandam biedt een integratieve behandeling die uw energie en kwaliteit van leven herstelt. Erkend acupuncturist, vergoed door zorgverzekeraar.",
   keywords: ["acupunctuur chronische vermoeidheid", "acupunctuur ME CVS Zaandam", "behandeling chronische vermoeidheid acupunctuur", "acupunctuur CVS", "acupunctuur chronische vermoeidheid Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

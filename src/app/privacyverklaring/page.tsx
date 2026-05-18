@@ -3,7 +3,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata("/privacyverklaring", {
-  title: "Privacyverklaring | Acupunctuur Zaandam",
+  title: "Privacyverklaring",
   description:
     "Privacyverklaring van Acupunctuur Zaandam: hoe wij omgaan met uw persoonsgegevens, conform de AVG/GDPR.",
   robots: { index: true, follow: true },

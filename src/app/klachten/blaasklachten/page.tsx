@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/blaasklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/blaasklachten", {
   title: "Acupunctuur bij Blaasklachten Zaandam | Blaasproblemen",
   description: "Last van blaasklachten, blaasprikkelheid of frequent plassen? Acupunctuur biedt een natuurlijke aanpak voor diverse blaasproblemen. Praktijk in Zaandam.",
   keywords: ["blaasklachten", "blaasproblemen", "acupunctuur blaas", "interstitiële cystitis", "frequent plassen", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

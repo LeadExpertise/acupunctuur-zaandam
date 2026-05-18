@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/allergische-klachten" },
+export const metadata: Metadata = pageMetadata("/klachten/allergische-klachten", {
   title: "Acupunctuur bij Allergische Klachten Zaandam | Allergieën Verminderen",
   description:
     "Last van allergieën voor huisstofmijt, dierenhaar of andere triggers? Acupunctuur in Zaandam moduleert de immuunrespons en vermindert allergische klachten structureel.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Th1 Th2 balans acupunctuur",
     "immuunsysteem allergie acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

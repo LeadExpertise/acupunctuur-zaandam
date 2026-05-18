@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-obstipatie" },
-  title: "Acupunctuur bij Obstipatie | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-obstipatie", {
+  title: "Acupunctuur bij Obstipatie",
   description:
     "Acupunctuur bij obstipatie stimuleert de darmbeweging en verlicht hardnekkige verstopping. Erkende behandeling in Zaandam, vergoed door aanvullende verzekering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "acupunctuur trage darm",
     "obstipatie alternatieve behandeling",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

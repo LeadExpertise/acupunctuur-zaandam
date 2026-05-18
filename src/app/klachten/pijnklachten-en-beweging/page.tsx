@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/pijnklachten-en-beweging" },
+export const metadata: Metadata = pageMetadata("/klachten/pijnklachten-en-beweging", {
   title: "Acupunctuur bij Pijnklachten & Bewegingsbeperking",
   description:
     "Effectieve, natuurlijke pijnbestrijding met acupunctuur in Zaandam. Wij behandelen o.a. lage rugklachten, nekpijn, artrose, ischias, en chronische spierpijn.",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "gewrichtspijn",
     "alternatieve geneeswijze pijn",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

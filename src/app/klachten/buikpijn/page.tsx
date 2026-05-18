@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/buikpijn" },
+export const metadata: Metadata = pageMetadata("/klachten/buikpijn", {
   title: "Acupunctuur bij Buikpijn Zaandam | Chronische Buikpijn",
   description:
     "Last van chronische of terugkerende buikpijn? Acupunctuur in Zaandam behandelt functionele en stressgerelateerde buikpijn via TCG en het autonome zenuwstelsel.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "stressgerelateerde buikpijn acupunctuur",
     "viscerale hypersensitiviteit acupunctuur",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

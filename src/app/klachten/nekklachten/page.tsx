@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/nekklachten" },
+export const metadata: Metadata = pageMetadata("/klachten/nekklachten", {
   title: "Acupunctuur bij Nekklachten Zaandam | Stijve Nek & Nekpijn",
   description:
     "Effectieve behandeling van nekpijn, stijve nek, uitstralingspijn naar arm en cervicale spondylose met acupunctuur in Zaandam. Ontdek hoe TCG uw nek ontspant.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "whiplash behandeling acupunctuur",
     "acupunctuur nek zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

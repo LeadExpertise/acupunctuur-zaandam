@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/reflux" },
+export const metadata: Metadata = pageMetadata("/klachten/reflux", {
   title: "Acupunctuur bij Reflux Zaandam | Brandend Maagzuur",
   description:
     "Last van reflux, brandend maagzuur of zure oprispingen? Acupunctuur in Zaandam behandelt GERD en refluxklachten via TCG en regulatie van de slokdarmsluitspier.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "slokdarmontsteking acupunctuur",
     "reflux behandelen acupunctuur zaandam",
   ],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

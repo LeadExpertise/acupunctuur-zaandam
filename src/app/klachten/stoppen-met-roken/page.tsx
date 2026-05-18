@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/klachten/stoppen-met-roken" },
+export const metadata: Metadata = pageMetadata("/klachten/stoppen-met-roken", {
   title: "Acupunctuur bij Stoppen met Roken Zaandam | Rookverslaving",
   description: "Wilt u stoppen met roken maar lukt het niet alleen? Acupunctuur vermindert cravings en ontwenningsverschijnselen. NADA-protocol beschikbaar. Praktijk in Zaandam.",
   keywords: ["stoppen met roken", "acupunctuur roken", "rookverslaving behandeling", "NADA protocol", "nicotine ontwenning", "acupunctuur Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

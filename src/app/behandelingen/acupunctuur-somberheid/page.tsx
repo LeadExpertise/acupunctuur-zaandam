@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
 import TrustBadges from "@/components/TrustBadges";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/behandelingen/acupunctuur-somberheid" },
-  title: "Acupunctuur bij Somberheid | Acupunctuur Zaandam",
+export const metadata: Metadata = pageMetadata("/behandelingen/acupunctuur-somberheid", {
+  title: "Acupunctuur bij Somberheid",
   description: "Last van somberheid, neerslachtigheid of een gedeprimeerde stemming? Acupunctuur Zaandam biedt ondersteunende behandeling naast professionele geestelijke gezondheidszorg. Erkend acupuncturist.",
   keywords: ["acupunctuur somberheid", "acupunctuur somberheid Zaandam", "behandeling somberheid acupunctuur", "acupunctuur neerslachtigheid", "acupunctuur depressie ondersteuning Zaandam"],
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
