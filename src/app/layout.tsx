@@ -53,6 +53,7 @@ export default function RootLayout({
             requested later in the page lifecycle. */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://hoirqrkdgbmvpwutwuwj.supabase.co" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://sa.searchatlas.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://code.iconify.design" />
         <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
