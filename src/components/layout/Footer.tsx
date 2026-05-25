@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GoogleMap from "@/components/GoogleMap";
 
 export default function Footer() {
   return (
@@ -11,7 +12,23 @@ export default function Footer() {
     >
       <h2 id="footer-titel" className="sr-only">Voettekst en contactinformatie</h2>
 
+      {/* Hidden microdata: geo coordinates for LocalBusiness SEO */}
+      <div
+        itemProp="geo"
+        itemScope
+        itemType="http://schema.org/GeoCoordinates"
+        className="hidden"
+      >
+        <meta itemProp="latitude" content="52.465231" />
+        <meta itemProp="longitude" content="4.810988" />
+      </div>
+
       <div className="max-w-6xl mr-auto ml-auto pr-6 pl-6">
+        {/* Map strip — locatie voor SEO (LocalBusiness signal) en gebruikers */}
+        <div className="mb-16">
+          <GoogleMap heightClassName="h-56 md:h-64" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-24">
 
           {/* Col 1: Brand + social icons */}
