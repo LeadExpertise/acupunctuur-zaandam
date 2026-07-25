@@ -4,8 +4,10 @@ type GoogleMapProps = {
   title?: string;
 };
 
+// Plain address + exact coordinates — including the business name made Google
+// resolve to the wrong location (Zaandam-Oost) on some pages.
 const MAP_SRC =
-  "https://maps.google.com/maps?q=Acupunctuur+Zaandam,+Lagendijk+3,+1541+KA+Koog+aan+de+Zaan&hl=nl&z=16&output=embed";
+  "https://maps.google.com/maps?q=Lagendijk+3,+1541+KA+Koog+aan+de+Zaan&ll=52.465186,4.810891&hl=nl&z=16&output=embed";
 
 export default function GoogleMap({
   className = "",

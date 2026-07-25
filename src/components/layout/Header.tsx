@@ -68,13 +68,6 @@ export default function Header() {
           </ul>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <a
-              href="tel:+31657998330"
-              className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-[#1F3A36] hover:text-[#4A6559] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F3] rounded-sm whitespace-nowrap"
-            >
-              <iconify-icon icon="solar:phone-linear" className="text-sm sm:text-base text-[#8A6B3D]" stroke-width="1.5" />
-              <span>+31 6 57 99 83 30</span>
-            </a>
             <Link
               href="/#contact"
               onClick={close}
@@ -118,7 +111,13 @@ export default function Header() {
             <span>5.0/5 op Google</span>
           </div>
           <span className="hidden sm:block w-1 h-1 rounded-full bg-[#1F3A36]/30" />
-          <span className="font-normal text-[#1F3A36]">Tijdelijk 10% korting op uw eerste sessie</span>
+          <a
+            href="tel:+31657998330"
+            className="inline-flex items-center gap-1.5 font-normal text-[#1F3A36] hover:text-[#4A6559] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] rounded-sm"
+          >
+            <iconify-icon icon="solar:phone-linear" className="text-sm text-[#8A6B3D]" stroke-width="1.5" />
+            +31 6 57 99 83 30
+          </a>
         </div>
       </div>
 
