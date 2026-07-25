@@ -78,7 +78,28 @@ export default function TrustBar() {
             unoptimized
           />
 
+          {/* Overige verzekeraars */}
+          <span
+            className="inline-flex items-center gap-2 rounded-full border border-[#1F3A36]/20 bg-[#FAF8F3] px-5 py-2.5 text-sm font-medium text-[#1F3A36]"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            <span className="text-[#8A6B3D] font-semibold">+30</span>
+            andere zorgverzekeraars
+          </span>
+
         </div>
+
+        <p className="text-sm font-light text-[#1F3A36]/70 text-center max-w-2xl mt-10">
+          Acupunctuur wordt door vrijwel alle Nederlandse zorgverzekeraars geheel of
+          gedeeltelijk vergoed vanuit de aanvullende verzekering — dus ook als uw
+          verzekeraar hier niet bij staat.{" "}
+          <a
+            href="/tarieven-vergoeding"
+            className="text-[#8A6B3D] underline underline-offset-4 hover:text-[#1F3A36] transition-colors duration-300"
+          >
+            Bekijk uw vergoeding
+          </a>
+        </p>
       </div>
     </section>
   );
