@@ -75,13 +75,13 @@ export default function Header() {
               <iconify-icon icon="solar:phone-linear" className="text-sm sm:text-base text-[#8A6B3D]" stroke-width="1.5" />
               <span>+31 6 57 99 83 30</span>
             </a>
-            <a
+            <Link
               href="/#contact"
               onClick={close}
               className="inline-flex items-center justify-center px-3 py-2 sm:px-6 sm:py-2.5 rounded-sm bg-[#1F3A36] text-[#FAF8F3] text-[10px] sm:text-xs font-normal hover:bg-[#4A6559] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F3] whitespace-nowrap"
             >
               Plan een afspraak
-            </a>
+            </Link>
 
             {/* Mobile hamburger */}
             <button
@@ -168,13 +168,13 @@ export default function Header() {
             <iconify-icon icon="solar:phone-linear" className="text-base text-[#8A6B3D]" stroke-width="1.5" />
             Bel direct: +31 6 57 99 83 30
           </a>
-          <a
+          <Link
             href="/#contact"
             onClick={close}
             className="inline-flex items-center justify-center px-6 py-3.5 rounded-sm bg-[#1F3A36] text-[#FAF8F3] text-sm font-normal hover:bg-[#4A6559] transition-colors duration-300"
           >
             Plan een afspraak
-          </a>
+          </Link>
         </div>
       )}
 
