@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BookingWidget from "@/components/BookingWidget";
+import GoogleMap from "@/components/GoogleMap";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata("/over-de-praktijk", {
@@ -566,6 +567,117 @@ export default function OverDePraktijkPage() {
                 alt="Menzis"
                 className="md:h-10 w-auto h-8 object-cover bg-center"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Locatie & Bereikbaarheid */}
+        <section
+          aria-labelledby="locatie-titel"
+          className="bg-[#FAF8F3] pt-32 pb-32"
+        >
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="mb-16 md:text-center flex flex-col items-center">
+              <div className="inline-flex flex-col items-center justify-center mb-6">
+                <span
+                  className="uppercase text-xs font-medium text-[#8A6B3D] tracking-widest mb-3"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Locatie &amp; bereikbaarheid
+                </span>
+                <div aria-hidden="true" className="h-px w-8 bg-[#8A6B3D]/60" />
+              </div>
+              <h2
+                id="locatie-titel"
+                className="text-4xl md:text-5xl font-normal tracking-tight text-[#1F3A36] mb-6"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Bezoekadres in Koog aan de Zaan
+              </h2>
+              <p className="md:mx-auto leading-relaxed text-base font-light text-[#1F3A36]/80 max-w-2xl">
+                De praktijk is gevestigd in BedrijvigeBij, op loopafstand van
+                station Koog-Bloemwijk en met gratis parkeergelegenheid voor de
+                deur. Goed bereikbaar vanuit heel Zaandam, Wormerveer, Zaandijk
+                en Westzaan.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+              {/* Map */}
+              <div className="lg:col-span-3">
+                <GoogleMap heightClassName="h-80 md:h-[28rem]" />
+              </div>
+
+              {/* Info */}
+              <div className="lg:col-span-2 flex flex-col gap-8">
+                <div>
+                  <h3
+                    className="text-xs font-medium tracking-widest uppercase text-[#1F3A36] mb-4"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Adres
+                  </h3>
+                  <address className="not-italic text-base font-light text-[#1F3A36]/90 leading-relaxed">
+                    Acupunctuur Zaandam
+                    <br />
+                    BedrijvigeBij, Kamer A103
+                    <br />
+                    Lagendijk 3
+                    <br />
+                    1541 KA Koog aan de Zaan
+                  </address>
+                </div>
+
+                <div>
+                  <h3
+                    className="text-xs font-medium tracking-widest uppercase text-[#1F3A36] mb-4"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Bereikbaarheid
+                  </h3>
+                  <ul className="space-y-2 text-sm font-light text-[#1F3A36]/80 list-none p-0 m-0">
+                    <li>5 min lopen vanaf station Koog-Bloemwijk</li>
+                    <li>Gratis parkeren voor de deur</li>
+                    <li>15 min vanaf Amsterdam-Noord (A8)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3
+                    className="text-xs font-medium tracking-widest uppercase text-[#1F3A36] mb-4"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Contact
+                  </h3>
+                  <div className="space-y-2 text-sm font-light text-[#1F3A36]/90">
+                    <p>
+                      <a
+                        href="tel:+31657998330"
+                        className="hover:text-[#4A6559] hover:underline transition-colors"
+                      >
+                        +31 6 5799 8330
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="https://wa.me/31657998330"
+                        className="hover:text-[#4A6559] hover:underline transition-colors"
+                      >
+                        WhatsApp
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Acupunctuur+Zaandam,+Lagendijk+3,+Koog+aan+de+Zaan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm bg-[#1F3A36] text-[#FAF8F3] text-sm font-normal hover:bg-[#4A6559] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A36] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F3] w-fit"
+                >
+                  Plan route in Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </section>
