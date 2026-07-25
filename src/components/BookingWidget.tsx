@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Booking widget façade. The third-party LeadConnector iframe (~500KB-1MB) is
@@ -11,14 +11,58 @@ import { useState } from "react";
  * Visual chrome (window header with three dots) is rendered immediately so
  * the layout does not shift when the iframe loads.
  *
- * @param id  Optional unique iframe id for analytics/debugging.
+ * @param id        Optional unique iframe id for analytics/debugging.
+ * @param autoLoad  "idle": load automatically shortly after the page is
+ *                  interactive (hero use — calendar appears without a click,
+ *                  after LCP so Core Web Vitals stay intact).
+ *                  "visible": load when the widget scrolls near the viewport.
+ *                  Omit for click-to-load.
  */
-export default function BookingWidget({ id }: { id?: string }) {
+export default function BookingWidget({
+  id,
+  autoLoad,
+}: {
+  id?: string;
+  autoLoad?: "idle" | "visible";
+}) {
   const [loaded, setLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
   const iframeId = id ? `booking_${id}` : "booking";
 
+  useEffect(() => {
+    if (loaded || !autoLoad) return;
+
+    if (autoLoad === "idle") {
+      // Wait until the browser is idle (or 2.5s as fallback) so the heavy
+      // third-party iframe never competes with the initial render.
+      const start = () => setLoaded(true);
+      // requestIdleCallback is missing in older Safari — fall back to a timer.
+      if (typeof window.requestIdleCallback === "function") {
+        const idleId = window.requestIdleCallback(start, { timeout: 2500 });
+        return () => window.cancelIdleCallback(idleId);
+      }
+      const timerId = setTimeout(start, 2500);
+      return () => clearTimeout(timerId);
+    }
+
+    // autoLoad === "visible"
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [autoLoad, loaded]);
+
   return (
-    <div className="w-full relative group">
+    <div ref={containerRef} className="w-full relative group">
       <div className="absolute -inset-1 bg-gradient-to-r from-[#8A6B3D]/30 to-[#4A6559]/30 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-300" />
       <div className="relative w-full bg-[#FAF8F3] rounded-xl shadow-2xl border border-[#1F3A36]/10 overflow-hidden flex flex-col">
 

@@ -75,7 +75,7 @@ export default function Hero() {
 
           {/* Right: booking planner (desktop) */}
           <div className="hidden lg:block w-full">
-            <BookingWidget id="hero" />
+            <BookingWidget id="hero" autoLoad="idle" />
           </div>
 
         </div>
