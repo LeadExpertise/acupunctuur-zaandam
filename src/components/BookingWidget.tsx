@@ -4,6 +4,13 @@ import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 
 /**
+ * Patiëntenstop: zet op `true` om de online planner overal op de site te
+ * vervangen door een melding dat er tijdelijk geen nieuwe afspraken mogelijk
+ * zijn. Zet terug op `false` om de planner weer te activeren.
+ */
+const PATIENT_STOP = true;
+
+/**
  * Booking widget façade. The third-party LeadConnector iframe (~500KB-1MB) is
  * only loaded after the user clicks. Saves the entire payload on initial
  * page load — single biggest Core Web Vitals win for the site.
@@ -30,7 +37,7 @@ export default function BookingWidget({
   const iframeId = id ? `booking_${id}` : "booking";
 
   useEffect(() => {
-    if (loaded || !autoLoad) return;
+    if (PATIENT_STOP || loaded || !autoLoad) return;
 
     if (autoLoad === "idle") {
       // Wait until the browser is idle (or 2.5s as fallback) so the heavy
@@ -80,8 +87,54 @@ export default function BookingWidget({
         </div>
 
         {/* Body */}
-        <div className="w-full bg-[#FAF8F3] min-h-[600px] flex-grow relative">
-          {loaded ? (
+        <div
+          className={`w-full bg-[#FAF8F3] ${PATIENT_STOP ? "min-h-[320px]" : "min-h-[600px]"} flex-grow relative`}
+        >
+          {PATIENT_STOP ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-8 text-center text-[#1F3A36]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-[#8A6B3D]"
+                aria-hidden="true"
+              >
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+                <line x1="9" x2="15" y1="14" y2="18" />
+                <line x1="15" x2="9" y1="14" y2="18" />
+              </svg>
+              <span
+                className="text-2xl font-medium"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Tijdelijke pati&euml;ntenstop
+              </span>
+              <p className="text-sm font-light text-[#1F3A36]/70 max-w-md">
+                Vanwege grote drukte nemen wij op dit moment helaas geen nieuwe
+                afspraken aan. Onze excuses voor het ongemak.
+              </p>
+              <p className="text-sm font-light text-[#1F3A36]/70 max-w-md">
+                Bent u al pati&euml;nt of heeft u een dringende vraag? Bel ons
+                gerust op{" "}
+                <a
+                  href="tel:+31657998330"
+                  className="font-medium text-[#8A6B3D] underline underline-offset-2 hover:text-[#1F3A36] transition-colors"
+                >
+                  06 5799 8330
+                </a>
+                .
+              </p>
+            </div>
+          ) : loaded ? (
             <>
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <svg
