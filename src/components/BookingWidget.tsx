@@ -119,8 +119,8 @@ export default function BookingWidget({
                 Tijdelijke pati&euml;ntenstop
               </span>
               <p className="text-sm font-light text-[#1F3A36]/70 max-w-md">
-                Vanwege grote drukte nemen wij op dit moment helaas geen nieuwe
-                afspraken aan. Onze excuses voor het ongemak.
+                Wij nemen tijdelijk geen nieuwe pati&euml;nten aan. Onze
+                excuses voor het ongemak.
               </p>
               <p className="text-sm font-light text-[#1F3A36]/70 max-w-md">
                 Bent u al pati&euml;nt of heeft u een dringende vraag? Bel ons
